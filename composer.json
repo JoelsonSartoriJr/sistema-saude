@@ -1,0 +1,27 @@
+{
+    "name": "JoelsonSartoriJr/sistema_saude",
+    "description": "sistema de gerenciamento voltado para a área de saúde médica.",
+    "minimun-stability": "stable",
+    "license": "MIT",
+    "authors": [{
+        "name": "Joelson Sartori Junior",
+        "email": "joelsonsartori@gmail.com",
+        "role": "Developer"
+    }, {
+        "name": "Matheus Scheunemann",
+        "email": "matheuss.sls@gmail.com",
+        "role": "Developer"
+    }],
+    "config": {
+        "vendo-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Config.php"
+        ]
+    },
+    "require": {}
+}

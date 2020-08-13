@@ -1,0 +1,3 @@
+utilizando composer
+
+https://www.php-fig.org/   {minimo: psr1, psr2, psr4}
