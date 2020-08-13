@@ -1,5 +1,5 @@
 {
-    "name": "JoelsonSartoriJr/sistema_saude",
+    "name": "joelsonsartorijr/sistema_saude",
     "description": "sistema de gerenciamento voltado para a área de saúde médica.",
     "minimun-stability": "stable",
     "license": "MIT",
@@ -23,5 +23,7 @@
             "source/Config.php"
         ]
     },
-    "require": {}
+    "require": {
+        "coffeecode/router": "^1.0"
+    }
 }
