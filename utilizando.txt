@@ -1,3 +1,5 @@
 utilizando composer
 
 https://www.php-fig.org/   {minimo: psr1, psr2, psr4}
+
+https://packagist.org/packages/coffeecode/router para cuidar das rotas
