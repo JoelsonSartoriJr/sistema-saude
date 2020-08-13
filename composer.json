@@ -2,12 +2,15 @@
     "name": "joelsonsartorijr/sistema-saude",
     "description": "Sistema de gerenciamento de clinicas de saude",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Joelson Sartori Junior",
-            "email": "joelsonsartori@gmail.com"
-        }
-    ],
+    "authors": [{
+        "name": "Joelson Sartori Junior",
+        "email": "joelsonsartori@gmail.com"
+    }],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    }
 }
