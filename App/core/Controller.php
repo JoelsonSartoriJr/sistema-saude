@@ -4,8 +4,7 @@ namespace Application\core;
 
 use Application\models\Users;
 
-class Controller
-{
+class Controller{
 
   
   public function model($model){
