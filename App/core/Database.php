@@ -4,13 +4,22 @@ namespace Application\core;
 
 class Database{
     
-    public function connectUsers(){
-        $xml = simplexml_load_file('../data/users.xml');
+    private function connect($url){
+        $xml = simplexml_load_file($url);
 
         if($xml === false){
             throw new Exception('Problema ao acessar o banco de dados.');
         } else{
-            echo 'ok';
+            return $xml;
         }
     }
+
+    public function connectUsers(){
+        return $this->connect('../data/users.xml');
+    }
+
+    public function connectDatasheet(){
+        return $this->connect('../data/datasheet.xml');
+    }
+
 }
