@@ -1,5 +1,5 @@
 <?php
-namespace Application\core;
+namespace App\core;
 
 class App{
     protected $controller = 'Home';
@@ -39,8 +39,6 @@ class App{
             if ( method_exists($this->controller, $url[1]) && !$this->page404) {
                 $this->method = $url[1];
             } else {
-                // caso a classe ou o método informado não exista, o método pageNotFound
-                // do Controller é chamado.
                 $this->method = 'pageNotFound';
             }
         }

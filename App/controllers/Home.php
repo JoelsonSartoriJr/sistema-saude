@@ -1,7 +1,7 @@
 
 <?php
 
-use Application\core\Controller;
+use App\core\Controller;
 
 class Home extends Controller{
 

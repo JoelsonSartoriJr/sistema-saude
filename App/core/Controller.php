@@ -1,8 +1,8 @@
 <?php
 
-namespace Application\core;
+namespace App\core;
 
-use Application\models\Users;
+#use App\models\Users;
 
 class Controller{
 

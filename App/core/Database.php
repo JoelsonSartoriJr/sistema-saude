@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\core;
+namespace App\core;
 
 class Database{
     
@@ -15,11 +15,16 @@ class Database{
     }
 
     public function connectUsers(){
+        echo 'ok';
         return $this->connect('../data/users.xml');
     }
 
     public function connectDatasheet(){
         return $this->connect('../data/datasheet.xml');
+    }
+
+    public function connectExams(){
+        return $this->connect('../data/exams.xml');
     }
 
 }
