@@ -1,0 +1,12 @@
+{
+    "name": "not/sistema-saude",
+    "description": "Sistema de saude desenvolvido para a disciplina SisteInternet 2",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joelson Sartori",
+            "email": "joelsonsartori@gmail.com"
+        }
+    ],
+    "require": {}
+}
