@@ -1,17 +1,35 @@
-:root{
-  --primary:#0275D8;
-  --light: #ffffff;
-  --grey:#efefef;
+:root {
+    --primary: #4a8eca;
+    --light: #ffffff;
+    --grey: #efefef;
+    --bgform: #fff;
 }
 
-.bg-gradient{
-  background-image: linear-gradient(to top, #5768f3, #4c5ff2, #3f57f1, #304ef0, #1c45ef);
+.bg-gradient {
+    background-image: linear-gradient(
+        to top,
+        #5768f3,
+        #4c5ff2,
+        #3f57f1,
+        #304ef0,
+        #1c45ef
+    );
 }
 
-body{
-  overflow: hidden;
-  font-family: 'Mulish', sans-serif;
-  font-weight: 300;
-  background-color: var(--primary);
-  color: var(--primary);
+body {
+    overflow: hidden;
+    font-family: "Mulish", sans-serif;
+    font-weight: 300;
+    background-color: var(--primary);
+    color: var(--primary);
+}
+
+.bg-form {
+  background-color: var(--bgform)!important;
+  width: 100vw;
+  height: 100vh;
+}
+
+.dest{
+  hover:
 }

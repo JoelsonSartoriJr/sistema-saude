@@ -1,7 +1,7 @@
 #topbar-container {
-    background-color: #ffffff;
+    background-color: #f8f9fc;
     height: 12vh;
-    min-width: 80vw;
+    min-width: 100vw;
     text-align: center;
     color: #001737;
 }

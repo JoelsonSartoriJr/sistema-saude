@@ -2,7 +2,7 @@
 
   <!--Sidebar-->
   <div id="sidebar-container" class="bg-gradient">
-    <div class=" logo d-flex justify-content-center rounded-circle">
+    <div class="logo d-flex justify-content-center rounded-circle">
       <img src="/assets/img/medica.jpg" class="rounded-circle">
       <div class="nome">
         <p class="font-weight-bold"> Joana Silveira</p>
@@ -13,11 +13,11 @@
 
       <div class="d-flex pl-4 justify-content-center">
         <ion-icon name="reader-outline"></ion-icon>
-        <a href="admin" class="d-block text-light p-3">Lista de Cadastrados</a>
+        <a href="#" class="d-block text-light p-3">Lista de Cadastrados</a>
       </div>
       <div class="d-flex pl-4 justify-content-center">
         <ion-icon name="flask-outline"></ion-icon>
-        <a href="laboratorio" class="d-block text-light p-3">Cadastro Laboratório</a>
+        <a href="#" class="d-block text-light p-3">Cadastro Laboratório</a>
       </div>
       <div class="d-flex justify-content-center">
         <ion-icon ion-icon name="fitness-outline"></ion-icon>
@@ -31,7 +31,7 @@
         <ion-icon name="reader-outline"></ion-icon>
         <a href="#" class="d-block text-light p-3">Cadastro Consulta</a>
       </div>
-
+      
     </div>
   </div>
 
