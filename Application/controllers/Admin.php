@@ -12,19 +12,4 @@ class Admin extends Controller
     $this->view('admin/index');
   }
 
-  public function laboratorio()
-  {
-    $this->view('admin/cadastroLab.php');
-  }
-
-  public function medico()
-  {
-    $this->view('admin/cadastroMed.php');
-  }
-
-  public function paciente()
-  {
-    $this->view('admin/cadastroPac.php');
-  }
-
 }

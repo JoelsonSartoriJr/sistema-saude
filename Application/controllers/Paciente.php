@@ -2,14 +2,14 @@
 
 use Application\core\Controller;
 
-class laboratorio extends Controller
+class Paciente extends Controller
 {
   /*
   * chama a view index.php do  /home   ou somente   /
   */
   public function index()
   {
-    $this->view('laboratorio/index');
+    $this->view('paciente/index');
   }
 
 }

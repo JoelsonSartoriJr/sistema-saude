@@ -6,7 +6,7 @@
       <img src="/assets/img/medica.jpg" class="rounded-circle">
       <div class="nome">
         <p class="font-weight-bold"> Joana Silveira</p>
-        <p>Admin</p>
+        <p>Paciente</p>
       </div>
     </div>
     <div class="menu">

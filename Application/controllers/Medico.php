@@ -2,7 +2,7 @@
 
 use Application\core\Controller;
 
-class medico extends Controller
+class Medico extends Controller
 {
   /*
   * chama a view index.php do  /home   ou somente   /
