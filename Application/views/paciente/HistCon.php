@@ -2,7 +2,7 @@
 
   <!--Sidebar-->
   <div id="sidebar-container" class="bg-gradient">
-    <div class=" logo d-flex justify-content-center rounded-circle">
+    <div class="logo d-flex justify-content-center rounded-circle">
       <img src="/assets/img/medica.jpg" class="rounded-circle">
       <div class="nome">
         <p class="font-weight-bold"> Joana Silveira</p>
@@ -11,21 +11,25 @@
     </div>
     <div class="menu">
 
-      <div class="d-flex pl-4 justify-content-center dest">
+      <div class="d-flex pl-4 justify-content-center">
         <ion-icon name="reader-outline"></ion-icon>
-        <a href="admin" class="d-block text-light p-3">Lista de Cadastrados</a>
+        <a href="#" class="d-block text-light p-3">Lista de Cadastrados</a>
       </div>
       <div class="d-flex pl-4 justify-content-center">
         <ion-icon name="flask-outline"></ion-icon>
-        <a href="cadastroLab" class="d-block text-light p-3">Cadastro Laboratório</a>
+        <a href="#" class="d-block text-light p-3">Cadastro Laboratório</a>
       </div>
       <div class="d-flex justify-content-center">
         <ion-icon ion-icon name="fitness-outline"></ion-icon>
-        <a href="cadastroMed" class="d-block text-light p-3">Cadastro Médico</a>
+        <a href="#" class="d-block text-light p-3">Cadastro Médico</a>
       </div>
       <div class="d-flex justify-content-center">
         <ion-icon name="person-outline"></ion-icon>
-        <a href="cadastroPac" class="d-block text-light p-3">Cadastro Paciente</a>
+        <a href="#" class="d-block text-light p-3">Cadastro Paciente</a>
+      </div>
+      <div class="d-flex justify-content-center">
+        <ion-icon name="reader-outline"></ion-icon>
+        <a href="#" class="d-block text-light p-3">Cadastro Consulta</a>
       </div>
 
     </div>
@@ -40,40 +44,30 @@
     <table class="table table-striped bg-white m-2 ">
       <thead class="thead-dark">
         <tr>
-          <th scope="col"></th>
-          <th scope="col">Tipo</th>
+          <th scope="col">#</th>
           <th scope="col">Nome</th>
-          <th scope="col">Endereço</th>
-          <th scope="col">Telefone</th>
-          <th scope="col">E-mail</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Médico</td>
+          <td>Mark</td>
           <td>Otto</td>
-          <td>Avenida Itália,2111</td>
-          <td>991456578</td>
-          <td>Otto@gmail.com</td>
+          <td>@mdo</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>Médico</td>
-          <td>Otto</td>
-          <td>Avenida Itália,2111</td>
-          <td>991456578</td>
-          <td>Otto@gmail.com</td>
-
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>Médico</td>
-          <td>Otto</td>
-          <td>Avenida Itália,2111</td>
-          <td>991456578</td>
-          <td>Otto@gmail.com</td>
-
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
         </tr>
       </tbody>
     </table>

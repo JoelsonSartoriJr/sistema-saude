@@ -23,13 +23,9 @@
         <ion-icon ion-icon name="fitness-outline"></ion-icon>
         <a href="#" class="d-block text-light p-3">Cadastro Médico</a>
       </div>
-      <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center dest">
         <ion-icon name="person-outline"></ion-icon>
         <a href="#" class="d-block text-light p-3">Cadastro Paciente</a>
-      </div>
-      <div class="d-flex justify-content-center">
-        <ion-icon name="reader-outline"></ion-icon>
-        <a href="#" class="d-block text-light p-3">Cadastro Consulta</a>
       </div>
 
     </div>
@@ -38,39 +34,54 @@
   <!--Topbar + Conteúdo-->
   <div>
     <div id="topbar-container" class="shadow p-3 bg-white rounded">
-      <p class="h1 pr-5 ">Lista de cadastrados</p>
+      <p class="h1 pr-5 ">Cadastro de paciente</p>
     </div>
 
-    <table class="table table-striped bg-white m-2 ">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
+    <form class="m-4">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Nome completo</label>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="Nome">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Endereço</label>
+          <input type="text" class="form-control" id="inputPassword4" placeholder="Avenida, Rua">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Telefone</label>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="(99)99999-9999">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Gênero</label>
+          <input type="text" class="form-control" id="inputPassword4" placeholder="Masculino,Feminino">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Idade</label>
+          <input type="text" class="form-control" id="inputPassword4" placeholder="18">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">CPF</label>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="CPF">
+        </div>
+      </div>
+  
+      
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
   </div>
 
 </div>

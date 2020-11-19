@@ -1,8 +1,9 @@
 :root {
-    --primary: #4a8eca;
+    --primary: #438ac9;
     --light: #ffffff;
     --grey: #efefef;
     --bgform: #fff;
+    --dest: #28669c;
 }
 
 .bg-gradient {
@@ -31,5 +32,6 @@ body {
 }
 
 .dest{
-  hover:
+  background-color: var(--dest);
+  text-decoration: underline;
 }
