@@ -19,7 +19,9 @@ Abaixo estão apresentados os passos para rodar o site.
     http://localhost:8080/
 ```
 5. Até agora não estão implementada todas as rotas, as que funcionam até agora são:
+```
     http://localhost:8080/admin
     http://localhost:8080/laboratorio
     http://localhost:8080/medico
     http://localhost:8080/paciente
+```
