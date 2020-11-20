@@ -2,8 +2,6 @@
 
 namespace Application\core;
 
-use Application\models\Users;
-
 /**
 * Esta classe é responsável por instanciar um model e chamar a view correta
 * passando os dados que serão usados.
@@ -24,13 +22,7 @@ class Controller
 
   }
 
-  /**
-  * Este método é responsável por chamar uuma determinada view (página).
-  *
-  * @param  string  $view   A view que será chamada (ou requerida)
-  * @param  array   $data   São os dados que serão exibido na view
-  */
-  public function view(string $view, $data = [])
+  public function view(string $view)
   {
     require '../Application/views/' . $view . '.php';
 

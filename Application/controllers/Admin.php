@@ -12,4 +12,9 @@ class Admin extends Controller
     $this->view('admin/index');
   }
 
+  public function cadastroLab()
+  {
+    $this->view('admin/cadastroLab');
+  }
+
 }

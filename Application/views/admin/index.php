@@ -25,7 +25,7 @@
       </div>
       <div class="d-flex justify-content-center">
         <ion-icon name="person-outline"></ion-icon>
-        <a href="cadastroPac" class="d-block text-light p-3">Cadastro Paciente</a>
+        <a href="CadastroPac" class="d-block text-light p-3">Cadastro Paciente</a>
       </div>
 
     </div>
