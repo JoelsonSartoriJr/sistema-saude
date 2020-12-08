@@ -12,5 +12,5 @@ Abaixo estão apresentados os passos para rodar o site.
 1. Clone este repositório para a sua máquina.
 2. Instalação do composer.phar com o comando.
   ```sh
-  php composer.phar install
+  php -S localhost:8080 -t public/
   ```
