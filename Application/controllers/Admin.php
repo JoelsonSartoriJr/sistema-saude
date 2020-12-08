@@ -17,4 +17,14 @@ class Admin extends Controller
     $this->view('admin/cadastroLab');
   }
 
+  public function cadastroMed()
+  {
+    $this->view('admin/cadastroMed');
+  }
+
+  public function cadastroPac()
+  {
+    $this->view('admin/cadastroPac');
+  }
+
 }

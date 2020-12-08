@@ -17,7 +17,7 @@
                   <div class="form-group">
                     <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Senha">
                   </div>
-                  <a href="index.html" class="btn btn-primary btn-user btn-block">
+                  <a href=".\admin" class="btn btn-primary btn-user btn-block">
                     Login
                   </a>
                 </form>
