@@ -21,13 +21,13 @@ try {
                 $_SESSION['type'] = $type;
 
                 if($type == 'admin'){
-                    header('Location: ../views/admin/index.php');
+                    header('Location: ../views/admin/admin.php');
                 } elseif($type == 'doctor'){
-                    header('Location: ../views/medico/index.php');
+                    header('Location: ../views/medico/medico.php');
                 }elseif($type == 'lab'){
-                    header('Location: ../views/laboratorio/index.php');
+                    header('Location: ../views/laboratorio/laboratorio.php');
                 }elseif($type == 'patient'){
-                    header('Location: ../views/paciente/index.php');
+                    header('Location: ../views/paciente/paciente.php');
                 }
             }else{
                 console_log('Usúario não encontrado');

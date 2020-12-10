@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+require_once '../../utils/Utils.php';
+
+if (!isset($_SESSION['user'])) {
+    console_log('Usuario não está logado');
+    header("Location: index.php");
+}
+if ($_SESSION['type'] != 'lab') {
+    console_log('Usuario não é laboratorio...');
+    header("Location: index.php");
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,41 +22,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/form.css">
+    <link rel="stylesheet" href="../../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/table.css">
+    <link rel="stylesheet" href="../../assets/css/topbar.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-  <div class="d-flex bg-white">
+      <!--Histórico de exames-->
+<div class="d-flex bg-white">
 
 <!--Sidebar-->
 <div id="sidebar-container" class="bg-gradient">
   <div class=" logo d-flex justify-content-center rounded-circle">
-    <img src="/assets/img/medica.jpg" class="rounded-circle">
+    <img src="../../assets/img/medica.jpg" class="rounded-circle">
     <div class="nome">
-      <p class="font-weight-bold"> Joana Silveira</p>
-      <p>Medico</p>
+      <p class="font-weight-bold"> Boa Vida</p>
+      <p>Laboratório</p>
     </div>
   </div>
   <div class="menu">
 
-    <div class="d-flex pl-4 justify-content-center">
+    <div class="d-flex pl-4 justify-content-center dest">
       <ion-icon name="reader-outline"></ion-icon>
-      <a href="admin" class="d-block text-light p-3">Lista de Cadastrados</a>
+      <a href="admin" class="d-block text-light p-3">Histórico de consultas</a>
     </div>
     <div class="d-flex pl-4 justify-content-center">
       <ion-icon name="flask-outline"></ion-icon>
-      <a href="laboratorio" class="d-block text-light p-3">Cadastro Laboratório</a>
+      <a href="laboratorio" class="d-block text-light p-3">Cadastro de consultas</a>
     </div>
     <div class="d-flex justify-content-center">
       <ion-icon ion-icon name="fitness-outline"></ion-icon>
-      <a href="#" class="d-block text-light p-3">Cadastro Médico</a>
-    </div>
-    <div class="d-flex justify-content-center">
-      <ion-icon name="person-outline"></ion-icon>
-      <a href="#" class="d-block text-light p-3">Cadastro Paciente</a>
-    </div>
-    <div class="d-flex justify-content-center">
-      <ion-icon name="reader-outline"></ion-icon>
-      <a href="#" class="d-block text-light p-3">Cadastro Consulta</a>
+      <a href="#" class="d-block text-light p-3">Alterar cadastro</a>
     </div>
 
   </div>
@@ -50,36 +64,44 @@
 <!--Topbar + Conteúdo-->
 <div>
   <div id="topbar-container" class="shadow p-3 bg-white rounded">
-    <p class="h1 pr-5 ">Lista de cadastrados</p>
+    <p class="h1 pr-5 ">Histórico de consultas</p>
   </div>
 
   <table class="table table-striped bg-white m-2 ">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col"></th>
+        <th scope="col">Data</th>
+        <th scope="col">Médico</th>
+        <th scope="col">Paciente</th>
+        <th scope="col">Receita</th>
+        <th scope="col">Observações</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>05/10/2019</td>
+        <td>Alexandre</td>
+        <td>Marcos</td>
+        <td>Dipirona</td>
+        <td>Dor de cabeça</td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
+        <td>05/10/2019</td>
+        <td>Alexandre</td>
+        <td>Marcos</td>
+        <td>Dipirona</td>
+        <td>Dor de cabeça</td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+        <td>05/10/2019</td>
+        <td>Alexandre</td>
+        <td>Marcos</td>
+        <td>Dipirona</td>
+        <td>Dor de cabeça</td>
       </tr>
     </tbody>
   </table>

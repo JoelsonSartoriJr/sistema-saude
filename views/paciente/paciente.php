@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+require_once '../../utils/Utils.php';
+
+if (!isset($_SESSION['user'])) {
+    console_log('Usuario não está logado');
+    header("Location: index.php");
+}
+if ($_SESSION['type'] != 'patient') {
+    console_log('Usuario não é paciente....');
+    header("Location: index.php");
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>

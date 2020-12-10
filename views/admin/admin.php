@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+require_once '../../utils/Utils.php';
+
+if (!isset($_SESSION['user'])) {
+    console_log('Usuario não está logado');
+    header("Location: index.php");
+}
+if ($_SESSION['type'] != 'admin') {
+    console_log('Usuario não é administrador');
+    header("Location: index.php");
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,19 +45,19 @@
 
             <div class="d-flex pl-4 justify-content-center dest">
               <ion-icon name="reader-outline"></ion-icon>
-              <a href="admin" class="d-block text-light p-3">Lista de Cadastrados</a>
+              <a href="admin.php" class="d-block text-light p-3">Lista de Cadastrados</a>
             </div>
             <div class="d-flex pl-4 justify-content-center">
               <ion-icon name="flask-outline"></ion-icon>
-              <a href="\admin\cadastroLab" class="d-block text-light p-3">Cadastro Laboratório</a>
+              <a href="cadastroLab.php" class="d-block text-light p-3">Cadastro Laboratório</a>
             </div>
             <div class="d-flex justify-content-center">
               <ion-icon ion-icon name="fitness-outline"></ion-icon>
-              <a href="\admin\cadastroMed" class="d-block text-light p-3">Cadastro Médico</a>
+              <a href="cadastroMed.php" class="d-block text-light p-3">Cadastro Médico</a>
             </div>
             <div class="d-flex justify-content-center">
               <ion-icon name="person-outline"></ion-icon>
-              <a href="\admin\cadastroPac" class="d-block text-light p-3">Cadastro Paciente</a>
+              <a href="cadastroPac.php" class="d-block text-light p-3">Cadastro Paciente</a>
             </div>
 
           </div>
