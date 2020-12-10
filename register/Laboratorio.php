@@ -4,7 +4,7 @@ session_start();
 
 
 require_once '../utils/Utils.php';
-require_once '../model/Patient.php';
+require_once '../model/Lab.php';
 
 try {
 
@@ -13,34 +13,31 @@ try {
     if (file_exists('../date/date.xml')){
         $xml = simplexml_load_file('../date/date.xml')  or die ("Failed to load");
         if($method == 'POST'){
-            $cpf = $_POST['cpf'];
-
-            $node = $xml->xpath("//user[cpf = '$cpf']");
+            $cnpj = $_POST['cnpj'];
+            $node = $xml->xpath("//user[cnpj = '$cnpj']");
 
             if(count($node) > 0){
-                $name = $_POST['name'];
-                console_log('Usúario já existe...');
+                console_log('Laboratorio já existe...');
             }else{
                 $user = $xml->users->addChild('user');
-
                 $id = md5(uniqid(""));
-                $type = 'patient';
-                $name = $_POST['name'];
+                $type = 'lab';
                 $phone = $_POST['phone'];
+                $email = $_POST['email'];
                 $address = $_POST['address'];
                 $password = $_POST['password'];
-                $gender = $_POST['gender'];
-                $date_nasc = $_POST['date_nasc'];
-                $email = $_POST['email'];
+                $type_exam = $_POST['type_exam'];
 
-                $patient = new Patient($id, $type, $name, $phone, $email,$address, $password, $gender, $date_nasc, $cpf);
+                $lab = new Lab($id, $type, $phone, $email,$address, $password, $type_exam, $cnpj);
 
-                foreach ($patient as $key => $value){
+                foreach ($lab as $key => $value){
                     $user->addChild($key, $value);
                 }
+
                 $xml->asXML('../date/date.xml');
-                console_log("O paciente".$name."foi adicionado com sucesso no banco de dados");
+                console_log("O Laboratorio foi adicionado com sucesso no banco de dados");
             }
+            
         }
     } else {
         console_log('Erro ao conectar ao bando de dados.....');

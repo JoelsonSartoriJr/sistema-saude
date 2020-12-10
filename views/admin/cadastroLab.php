@@ -73,41 +73,41 @@ if ($_SESSION['type'] != 'admin') {
       <p class="h1 pr-5 ">Cadastro de Laboratórios</p>
     </div>
 
-    <form class="m-4">
-      <div class="form-row">
+    <form class="m-4" method="POST" action="../../register/Laboratorio.php">
+      <div class="form-row" >
         <div class="form-group col-md-6">
           <label for="inputEmail">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          <input type="email" class="form-control" name="email" placeholder="Email">
         </div>
         <div class="form-group col-md-6">
           <label for="inputPassword">Senha</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+          <input type="password" class="form-control" name="password" placeholder="Senha">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputName">Nome completo</label>
-          <input type="name" class="form-control" id="inputEmail4" placeholder="Nome">
+          <input type="name" class="form-control" name="name" placeholder="Nome">
         </div>
         <div class="form-group col-md-6">
           <label for="inputAdress">Endereço</label>
-          <input type="text" class="form-control" id="inputPassword4" placeholder="Avenida, Número">
+          <input type="text" class="form-control" name="address" placeholder="Avenida, Número">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputTel">Telefone</label>
-          <input pattern="^\d{2}-\d{5}-\d{4}$" type="tel" class="form-control" id="inputEmail4" placeholder="(99)99999-9999">
+          <input type="tel" class="form-control" name="phone" placeholder="(99)99999-9999">
         </div>
         <div class="form-group col-md-6">
           <label for="inputCnpj">CNPJ</label>
-          <input type="number" class="form-control" id="inputEmail4" placeholder="0000-0000">
+          <input type="number" class="form-control" name="cnpj" placeholder="0000-0000">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control" name="type_exam">
             <option>Mamografia</option>
             <option>Ressonância Magnética</option>
             <option>Ultra-sonografia</option>

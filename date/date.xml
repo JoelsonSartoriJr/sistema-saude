@@ -19,13 +19,8 @@
             <email>lab@email.com</email>
             <password>lab</password>
         </user>
-        <user>
-            <id>A7CBCF56CD2840709A10A34ACD7E4DB9</id>
-            <type>patient</type>
-            <email>patient@email.com</email>
-            <password>patient</password>
-        </user>
-    </users>
+    <user><name>patient</name><gender>Outro</gender><date_nasc>16/01/1995</date_nasc><cpf>9999999999</cpf><id>5d9abd91e5dc4349af328af6c4ab0b42</id><type>patient</type><phone>(99)999999999</phone><email>patient@email.com</email><address>Rua Senhor dos Passos</address><password>patient</password></user>
+    <user><type_exam>Ressonância Magnética</type_exam><cnpj>12345678</cnpj><id>771a87bb1897a54e3f68e5cb67b5e426</id><type>lab</type><phone>(99)999999999</phone><email>lab@email.com</email><address>Av Rio Grande, 655</address><password>lab</password></user></users>
     <exames>
         <exame>
             <tipoexame><tipo>DOSAGEM DE ACIDO URICO</tipo></tipoexame>
