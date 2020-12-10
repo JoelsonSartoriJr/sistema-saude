@@ -65,44 +65,34 @@ if ($_SESSION['type'] != 'patient') {
     <p class="h1 pr-5 ">Historico de consultas</p>
   </div>
 
-  <table class="table table-striped bg-white m-2 ">
-    <thead class="thead-dark">
-      <tr>
-      <th scope="col">#</th>
-        <th scope="col">Data</th>
-        <th scope="col">Médico</th>
-        <th scope="col">Paciente</th>
-        <th scope="col">Receita</th>
-        <th scope="col">Resultado</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>10/12/2020</td>
-        <td>Ricardo</td>
-        <td>Matheus</td>
-        <td>Dipirona</td>
-        <td>de 2 em 2 horas</td>
-      </tr>
-      <tr>
-      <th scope="row">2</th>
-        <td>10/12/2020</td>
-        <td>Ricardo</td>
-        <td>Matheus</td>
-        <td>Dipirona</td>
-        <td>de 2 em 2 horas</td>
-      </tr>
-      <tr>
-      <th scope="row">3</th>
-        <td>10/12/2020</td>
-        <td>Ricardo</td>
-        <td>Matheus</td>
-        <td>Dipirona</td>
-        <td>de 2 em 2 horas</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive p-2">
+    <table id="datas" class="table table-striped bg-white" >
+      <thead class="thead-dark">
+        <th>Médicx</th>
+        <th>Sintomas</th>
+        <th>Hora</th>
+        <th>Data</th>
+      </thead>
+      <?php
+        $xml = simplexml_load_file('../../date/date.xml')  or die ("Failed to load");
+        $consultions = $xml->consultions;
+        console_log($consultions);
+        foreach($consultions->consultion as $consultion){
+          if($consultion->patience_id == $_SESSION['user']){
+            $doctor = $consultion->doctor;
+            $symptoms = $consultion->symptoms;
+            $hora = $consultion->hour;
+            $data = $consultion->date;
+            ?>
+            <tr>
+              <td> <?php echo $doctor ;?> </td>
+              <td> <?php echo $symptoms ;?> </td>
+              <td> <?php echo $hora ;?> </td>
+              <td> <?php echo $data ;?> </td>
+            </tr>
+        <?php }}?>
+      </table>
+  </div>
 </div>
 
 </div>
