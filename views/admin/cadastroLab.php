@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+require_once '../../utils/Utils.php';
+
+if (!isset($_SESSION['user'])) {
+    console_log('Usuario não está logado');
+    header("Location: index.php");
+}
+if ($_SESSION['type'] != 'admin') {
+    console_log('Usuario não é administrador');
+    header("Location: index.php");
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,6 +19,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/form.css">
+    <link rel="stylesheet" href="../../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/table.css">
+    <link rel="stylesheet" href="../../assets/css/topbar.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,24 +43,29 @@
     </div>
     <div class="menu">
 
-      <div class="d-flex pl-4 justify-content-center">
-        <ion-icon name="reader-outline"></ion-icon>
-        <a href="#" class="d-block text-light p-3">Lista de Cadastrados</a>
-      </div>
-      <div class="d-flex pl-4 justify-content-center dest">
-        <ion-icon name="flask-outline"></ion-icon>
-        <a href="#" class="d-block text-light p-3">Cadastro Laboratório</a>
-      </div>
-      <div class="d-flex justify-content-center">
-        <ion-icon ion-icon name="fitness-outline"></ion-icon>
-        <a href="#" class="d-block text-light p-3">Cadastro Médico</a>
-      </div>
-      <div class="d-flex justify-content-center">
-        <ion-icon name="person-outline"></ion-icon>
-        <a href="#" class="d-block text-light p-3">Cadastro Paciente</a>
-      </div>
-      
-    </div>
+            <div class="d-flex pl-4 justify-content-center ">
+              <ion-icon name="reader-outline"></ion-icon>
+              <a href="admin.php" class="d-block text-light p-3">Lista de Cadastrados</a>
+            </div>
+            <div class="d-flex pl-4 justify-content-center dest">
+              <ion-icon name="flask-outline"></ion-icon>
+              <a href="cadastroLab.php" class="d-block text-light p-3">Cadastro Laboratório</a>
+            </div>
+            <div class="d-flex justify-content-center">
+              <ion-icon ion-icon name="fitness-outline"></ion-icon>
+              <a href="cadastroMed.php" class="d-block text-light p-3">Cadastro Médico</a>
+            </div>
+            <div class="d-flex justify-content-center">
+              <ion-icon name="person-outline"></ion-icon>
+              <a href="cadastroPac.php" class="d-block text-light p-3">Cadastro Paciente</a>
+            </div>
+            <div class="d-flex justify-content-center">
+              <ion-icon name="person-outline"></ion-icon>
+              <a href="../../index.php" class="d-block text-light p-3">Sair</a>
+            </div>
+
+
+          </div>
   </div>
 
   <!--Topbar + Conteúdo-->
@@ -56,8 +81,8 @@
           <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
         </div>
         <div class="form-group col-md-6">
-          <label for="inputPassword4">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          <label for="inputPassword4">Senha</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
         </div>
       </div>
       <div class="form-row">

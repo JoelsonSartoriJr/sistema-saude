@@ -51,7 +51,7 @@ if ($_SESSION['type'] != 'lab') {
     </div>
     <div class="d-flex pl-4 justify-content-center">
       <ion-icon name="flask-outline"></ion-icon>
-      <a href="laboratorio" class="d-block text-light p-3">Cadastro de consultas</a>
+      <a href="laboratorio" class="d-block text-light p-3">Cadastro de exames</a>
     </div>
     <div class="d-flex justify-content-center">
       <ion-icon ion-icon name="fitness-outline"></ion-icon>
