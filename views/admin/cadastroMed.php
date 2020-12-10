@@ -77,18 +77,18 @@ if ($_SESSION['type'] != 'admin') {
   <form class="m-4">
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
+        <label for="inputEmail">Email</label>
         <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        <label for="inputPassword">Senha</label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Nome completo</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="Nome">
+        <label for="inputName">Nome completo</label>
+        <input type="name" class="form-control" id="inputEmail4" placeholder="Nome">
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Endereço</label>
@@ -96,11 +96,11 @@ if ($_SESSION['type'] != 'admin') {
       </div>
     </div>
     <div class="form-row">
+    <div class="form-group col-md-6">
+          <label for="inputTel">Telefone</label>
+          <input pattern="^\d{2}-\d{5}-\d{4}$" type="tel" class="form-control" id="inputEmail4" placeholder="(99)99999-9999">
+        </div>
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Telefone</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="(99)99999-9999">
-      </div>
-      <div class="form-group">
         <label for="exampleFormControlSelect1">Especialidade:</label>
         <select class="form-control" id="exampleFormControlSelect1">
           <option>Ginecologia</option>

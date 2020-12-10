@@ -44,15 +44,15 @@ if ($_SESSION['type'] != 'lab') {
   </div>
   <div class="menu">
 
-  <div class="d-flex pl-4 justify-content-center dest">
+  <div class="d-flex pl-4 justify-content-center ">
       <ion-icon name="reader-outline"></ion-icon>
-      <a href="laboratorio.php" class="d-block text-light p-3">Histórico de consultas</a>
+      <a href="laboratorio.php" class="d-block text-light p-3">Histórico de exames</a>
     </div>
-    <div class="d-flex pl-4 justify-content-center">
+    <div class="d-flex pl-4 justify-content-center ">
       <ion-icon name="flask-outline"></ion-icon>
-      <a href="cadastroCon.php" class="d-block text-light p-3">Cadastro de exames</a>
+      <a href="cadastroExam.php" class="d-block text-light p-3">Cadastro de exames</a>
     </div>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center dest">
       <ion-icon ion-icon name="fitness-outline"></ion-icon>
       <a href="alteraCadastro.php" class="d-block text-light p-3">Alterar cadastro</a>
     </div>
@@ -69,6 +69,52 @@ if ($_SESSION['type'] != 'lab') {
     <div id="topbar-container" class="shadow p-3 bg-white rounded">
       <p class="h1 pr-5 ">Listas de cadastros</p>
     </div>
+    <form class="m-4">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword">Senha</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputName">Nome completo</label>
+          <input type="name" class="form-control" id="inputEmail4" placeholder="Nome">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputAdress">Endereço</label>
+          <input type="text" class="form-control" id="inputPassword4" placeholder="Avenida, Número">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputTel">Telefone</label>
+          <input pattern="^\d{2}-\d{5}-\d{4}$" type="tel" class="form-control" id="inputEmail4" placeholder="(99)99999-9999">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCnpj">CNPJ</label>
+          <input type="number" class="form-control" id="inputEmail4" placeholder="0000-0000">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Mamografia</option>
+            <option>Ressonância Magnética</option>
+            <option>Ultra-sonografia</option>
+            <option>Ecografia</option>
+            <option>Exame de sangue</option>
+          </select>
+        </div>
+
+      </div> 
+      <button type="submit" class="btn btn-primary">Atualizar</button>
+    </form>
 
   </div>
 

@@ -47,9 +47,9 @@ if ($_SESSION['type'] != 'patient') {
       <ion-icon name="flask-outline"></ion-icon>
       <a href="paciente.php" class="d-block text-light p-3">Historico de Exames</a>
     </div>
-    <div class="d-flex pl-4 justify-content-center">
+    <div class="d-flex pl-4 justify-content-center dest">
       <ion-icon name="flask-outline"></ion-icon>
-      <a href="histCon.php" class="d-block text-light p-3">Historico de consultas</a>
+      <a href="histCon.php" class="d-block text-light p-3">Historico de Consultas</a>
     </div>
     <div class="d-flex justify-content-center">
       <ion-icon name="person-outline"></ion-icon>
@@ -62,36 +62,44 @@ if ($_SESSION['type'] != 'patient') {
 <!--Topbar + Conteúdo-->
 <div>
   <div id="topbar-container" class="shadow p-3 bg-white rounded">
-    <p class="h1 pr-5 ">Historico consultas</p>
+    <p class="h1 pr-5 ">Historico de consultas</p>
   </div>
 
   <table class="table table-striped bg-white m-2 ">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+      <th scope="col">#</th>
+        <th scope="col">Data</th>
+        <th scope="col">Médico</th>
+        <th scope="col">Paciente</th>
+        <th scope="col">Receita</th>
+        <th scope="col">Resultado</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>10/12/2020</td>
+        <td>Ricardo</td>
+        <td>Matheus</td>
+        <td>Dipirona</td>
+        <td>de 2 em 2 horas</td>
       </tr>
       <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
+      <th scope="row">2</th>
+        <td>10/12/2020</td>
+        <td>Ricardo</td>
+        <td>Matheus</td>
+        <td>Dipirona</td>
+        <td>de 2 em 2 horas</td>
       </tr>
       <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+      <th scope="row">3</th>
+        <td>10/12/2020</td>
+        <td>Ricardo</td>
+        <td>Matheus</td>
+        <td>Dipirona</td>
+        <td>de 2 em 2 horas</td>
       </tr>
     </tbody>
   </table>

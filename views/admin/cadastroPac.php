@@ -88,6 +88,10 @@ if ($_SESSION['type'] != 'admin') {
         <label for="name">Nome completo</label>
         <input type="text" class="form-control" name="name" placeholder="Nome">
       </div>
+      <div class="form-group col-md-6">
+          <label for="inputPassword4">Endereço</label>
+          <input type="text" class="form-control" id="inputPassword4" placeholder="Avenida, Número">
+        </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">

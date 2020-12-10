@@ -48,11 +48,11 @@ if ($_SESSION['type'] != 'doctor') {
       <ion-icon name="flask-outline"></ion-icon>
       <a href="medico.php" class="d-block text-light p-3">Lista de Consultas</a>
     </div>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center dest">
       <ion-icon ion-icon name="fitness-outline"></ion-icon>
       <a href="cadastroCon.php" class="d-block text-light p-3">Cadastro Consultas</a>
     </div>
-    <div class="d-flex justify-content-center dest">
+    <div class="d-flex justify-content-center ">
       <ion-icon name="person-outline"></ion-icon>
       <a href="alteraCadastro.php" class="d-block text-light p-3">Altera Cadastro</a>
     </div>
@@ -70,36 +70,40 @@ if ($_SESSION['type'] != 'doctor') {
       <p class="h1 pr-5 ">Cadastro consulta</p>
     </div>
 
-    <table class="table table-striped bg-white m-2 ">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
+    <form class="m-4">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Data</label>
+          <input type="date" class="form-control" id="inputEmail4" placeholder="">
+        </div>
+        <div class="form-group col-md-06">
+          <label for="exampleFormControlSelect1">Médico</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Ricardo</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-06">
+          <label for="exampleFormControlSelect1">Paciente</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Joana Silveira</option>
+          </select>
+        </div>
+        <div class="form-group col-md-06">
+          <label for="exampleFormControlSelect1">Receita</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Dipirona</option>
+            <option>Paracetamol</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Observações</label>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="Necessita tomar a cada 8 horas">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
   </div>
 
 </div>

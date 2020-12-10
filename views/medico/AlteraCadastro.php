@@ -70,36 +70,49 @@ if ($_SESSION['type'] != 'doctor') {
       <p class="h1 pr-5 ">Altera Cadastro</p>
     </div>
 
-    <table class="table table-striped bg-white m-2 ">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
+    <form class="m-4">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword">Senha</label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputName">Nome completo</label>
+        <input type="name" class="form-control" id="inputEmail4" placeholder="Nome">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Endereço</label>
+        <input type="text" class="form-control" id="inputPassword4" placeholder="Avenida, Rua">
+      </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+          <label for="inputTel">Telefone</label>
+          <input pattern="^\d{2}-\d{5}-\d{4}$" type="tel" class="form-control" id="inputEmail4" placeholder="(99)99999-9999">
+        </div>
+      <div class="form-group col-md-6">
+        <label for="exampleFormControlSelect1">Especialidade:</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>Ginecologia</option>
+          <option>Oftalmologia</option>
+          <option>Pediatra</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">CRM</label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="00000000">
+      </div>
+    </div> 
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+  </form>
   </div>
 
 </div>

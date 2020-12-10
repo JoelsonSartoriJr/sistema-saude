@@ -25,7 +25,7 @@
             <email>patient@email.com</email>
             <password>patient</password>
         </user>
-    <user><gender>Outro</gender><date_nasc>16/01/1995</date_nasc><cpf>9999999999</cpf><id>5cd2bde8791044140c29a07f9b2cde65</id><type>patient</type><name>teste teste</name><phone>999999999</phone><email>teste@email.com</email><password>teste</password></user></users>
+    <user><gender>Outro</gender><date_nasc>16/01/1995</date_nasc><cpf>9999999999</cpf><id>5cd2bde8791044140c29a07f9b2cde65</id><type>patient</type><name>teste teste</name><phone>999999999</phone><email>teste@email.com</email><password>teste</password></user><user><gender>masculino</gender><date_nasc>01/01/1998</date_nasc><cpf>040.582.370-31</cpf><id>626b279d92b2f7b8ab6fd2910327cc0c</id><type>patient</type><name>MATHEUS STALLBAUM SCHEUNEMANN</name><phone>53991520660</phone><email>matheuss.sls@gmail.com</email><password>teste</password></user></users>
     <exames>
         <exame>
             <tipoexame><tipo>DOSAGEM DE ACIDO URICO</tipo></tipoexame>

@@ -44,7 +44,7 @@ if ($_SESSION['type'] != 'doctor') {
   </div>
   <div class="menu">
 
-    <div class="d-flex pl-4 justify-content-center">
+    <div class="d-flex pl-4 justify-content-center dest">
       <ion-icon name="flask-outline"></ion-icon>
       <a href="medico.php" class="d-block text-light p-3">Lista de Consultas</a>
     </div>
@@ -52,7 +52,7 @@ if ($_SESSION['type'] != 'doctor') {
       <ion-icon ion-icon name="fitness-outline"></ion-icon>
       <a href="cadastroCon.php" class="d-block text-light p-3">Cadastro Consultas</a>
     </div>
-    <div class="d-flex justify-content-center dest">
+    <div class="d-flex justify-content-center ">
       <ion-icon name="person-outline"></ion-icon>
       <a href="alteraCadastro.php" class="d-block text-light p-3">Altera Cadastro</a>
     </div>

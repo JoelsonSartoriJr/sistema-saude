@@ -46,11 +46,11 @@ if ($_SESSION['type'] != 'lab') {
 
     <div class="d-flex pl-4 justify-content-center dest">
       <ion-icon name="reader-outline"></ion-icon>
-      <a href="laboratorio.php" class="d-block text-light p-3">Histórico de consultas</a>
+      <a href="laboratorio.php" class="d-block text-light p-3">Histórico de exames</a>
     </div>
     <div class="d-flex pl-4 justify-content-center">
       <ion-icon name="flask-outline"></ion-icon>
-      <a href="cadastroCon.php" class="d-block text-light p-3">Cadastro de exames</a>
+      <a href="cadastroExam.php" class="d-block text-light p-3">Cadastro de exames</a>
     </div>
     <div class="d-flex justify-content-center">
       <ion-icon ion-icon name="fitness-outline"></ion-icon>
