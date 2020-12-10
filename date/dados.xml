@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<date>
+    <users>
+        <user>
+            <id>A7CBCF56CD2840709A10A34ACD7E4DB9</id>
+            <tipo>admin</tipo>
+            <email>admin@admin.com</email>
+            <password>admin</password>
+        </user>
+        <user>
+            <especialidade>Alergia e Imunologia</especialidade>
+            <crm>5165165156151</crm>
+            <id>01678638c3870972a45cfd72b51837f7</id>
+            <tipo>medico</tipo>
+            <nome>Andre Becker</nome>
+            <telefone>(55) 9999-9528</telefone>
+            <rua>Av. Presidente Vargas</rua>
+            <numero>5</numero>
+            <bairro>Centro</bairro>
+            <complemento>Ap 101</complemento>
+            <cidade>Rio Grande</cidade>
+            <estado>RS</estado>
+            <cep>96.202-336</cep>
+            <email>medico@hotmail.com</email>
+            <senha>medico</senha>
+        </user>
+        <user>
+            <genero>masculino</genero>
+            <datanascimento>2020-07-07</datanascimento>
+            <cpf>032.343.730-35</cpf>
+            <id>ccf988db96cb0004d60b03d259522e4c</id>
+            <tipo>paciente</tipo>
+            <nome>Alceu Pinto</nome>
+            <telefone>(55) 9991-9528</telefone>
+            <rua>Av. Presidente Vargas</rua>
+            <numero>55</numero>
+            <bairro>Cristo Rei</bairro>
+            <complemento>Ap 70</complemento>
+            <cidade>Rio Grande</cidade>
+            <estado>RS</estado>
+            <cep>96.202-336</cep>
+            <email>alceupinto@hotmail.com</email>
+            <senha>paciente</senha>
+        </user>
+        <user>
+            <tipoexame>
+                <tipo>TEMPO DE TROMBOPLASTINA ATIVADA (PTTA)</tipo>
+                <tipo>DOSAGEM DE ACIDO URICO</tipo>
+                <tipo>DOSAGEM DE ALFA-1-GLICOPROTEINA ACIDA</tipo>
+                <tipo>DOSAGEM DE AMILASE</tipo>
+            </tipoexame>
+            <cnpj>84.884.884/8171-89</cnpj>
+            <id>fbf374902ed7065542fe81a62d7219f4</id>
+            <tipo>laboratorio</tipo>
+            <nome>Lab LTDA</nome>
+            <telefone>(55) 9891-9528</telefone>
+            <rua>Av. Presidente Vargas, 66</rua>
+            <numero>5</numero>
+            <bairro>asdasd</bairro>
+            <complemento>Sl 5</complemento>
+            <cidade>Rio Grande</cidade>
+            <estado>RS</estado>
+            <cep>96.202-336</cep>
+            <email>lab@hotmail.com</email>
+            <senha>laboratorio</senha>
+        </user>
+    </users>
+    <exames>
+        <exame>
+            <tipoexame><tipo>DOSAGEM DE ACIDO URICO</tipo></tipoexame>
+            <resultado>apto</resultado>
+            <laboratorioid>fbf374902ed7065542fe81a62d7219f4</laboratorioid>
+            <id>e2d4494f3c3959a0a56d69d79efc4798</id>
+            <hora>16:41</hora>
+            <data>2020-07-17</data>
+            <observacao>Não definido</observacao>
+            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
+            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
+            <outro>Não Definido</outro>
+        </exame>
+        <exame>
+            <tipoexame>
+                <tipo>TEMPO DE TROMBOPLASTINA ATIVADA (PTTA)</tipo>
+            </tipoexame>
+            <resultado>inapto</resultado>
+            <laboratorioid>fbf374902ed7065542fe81a62d7219f4</laboratorioid>
+            <id>cf48254591f0c4b02a464f74899c7f92</id>
+            <hora>16:49</hora>
+            <data>2020-07-09</data>
+            <observacao>ouve bug no sistema</observacao>
+            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
+            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
+            <outro/>
+        </exame>
+        <exame>
+            <tipoexame>
+                <tipo>TEMPO DE TROMBOPLASTINA ATIVADA (PTTA)</tipo>
+            </tipoexame>
+            <resultado>apto</resultado>
+            <laboratorioid>fbf374902ed7065542fe81a62d7219f4</laboratorioid>
+            <id>d8e27beebf9084051c430b7ca3e1dbf9</id>
+            <hora>17:10</hora>
+            <data>2020-07-02</data>
+            <observacao>Não definido</observacao>
+            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
+            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
+            <outro/>
+        </exame>
+        <exame>
+            <tipoexame>
+                <tipo>DOSAGEM DE ACIDO URICO</tipo>
+                <tipo>DOSAGEM DE ALFA-1-GLICOPROTEINA ACIDA</tipo>
+                <tipo>DOSAGEM DE AMILASE</tipo>
+            </tipoexame>
+            <resultado>apto</resultado>
+            <laboratorioid>fbf374902ed7065542fe81a62d7219f4</laboratorioid>
+            <id>5fee2b1431cca588ca6d0201b460f382</id>
+            <hora>17:16</hora>
+            <data>2020-07-23</data>
+            <observacao>Não definido</observacao>
+            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
+            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
+            <outro/>
+        </exame>
+        <exame>
+            <tipoexame>
+                <tipo>TEMPO DE TROMBOPLASTINA ATIVADA (PTTA)</tipo>
+            </tipoexame>
+            <resultado>apto</resultado>
+            <laboratorioid>fbf374902ed7065542fe81a62d7219f4</laboratorioid>
+            <id>ac36e1321ddfda798f63d3b562d372a4</id>
+            <hora>17:37</hora>
+            <data>2020-07-13</data>
+            <observacao>Não definido</observacao>
+            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
+            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
+            <outro/>
+        </exame>
+        <exame>
+            <tipoexame>
+                <tipo>TEMPO DE TROMBOPLASTINA ATIVADA (PTTA)</tipo>
+            </tipoexame>
+            <resultado>apto</resultado>
+            <laboratorioid>fbf374902ed7065542fe81a62d7219f4</laboratorioid>
+            <id>3ff3f297b114eb6fb50b674da29b73dd</id>
+            <hora>17:37</hora>
+            <data>2020-07-15</data>
+            <observacao>Não definido</observacao>
+            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
+            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
+            <outro/>
+        </exame>
+        <exame>
+            <tipoexame>
+                <tipo>DOSAGEM DE ACIDO URICO</tipo>
+            </tipoexame>
+            <resultado>apto</resultado>
+            <laboratorioid>fbf374902ed7065542fe81a62d7219f4</laboratorioid>
+            <id>0cf67ba036bd2c2af2a9ee27e0d4981c</id>
+            <hora>17:40</hora>
+            <data>2020-07-18</data>
+            <observacao>Não definido</observacao>
+            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
+            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
+            <outro>sada</outro>
+        </exame>
+        <exame>
+            <tipoexame>
+                <tipo>DOSAGEM DE ACIDO URICO</tipo>
+            </tipoexame>
+            <resultado>apto</resultado>
+            <laboratorioid>fbf374902ed7065542fe81a62d7219f4</laboratorioid>
+            <id>48dadcaf37ff85ffb882cf0750063591</id>
+            <hora>17:41</hora>
+            <data>2020-07-17</data>
+            <observacao>Não definido</observacao>
+            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
+            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
+            <outro/>
+        </exame>
+    </exames>
+    <consultas>
+        <consulta>
+            <sintomas>
+                <sintoma>Febre</sintoma>
+                <sintoma>Dor no Corpo</sintoma>
+                <sintoma>Dor de Barriga</sintoma>
+                <sintoma>Náusea</sintoma>
+                <sintoma>Outro</sintoma>
+            </sintomas>
+            <receita>Paracetamol</receita>
+            <id>d1dd403bd5d603d7b8b596bd989c23ce</id>
+            <hora>18:10</hora>
+            <data>2020-07-17</data>
+            <observacao>Não definido</observacao>
+            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
+            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
+            <outro>Desconhecido</outro>
+        </consulta>
+        <consulta>
+            <sintomas>
+                <sintoma>Febre</sintoma>
+                <sintoma>Dor no Corpo</sintoma>
+                <sintoma>Dor no Peito</sintoma>
+                <sintoma>Dor de Barriga</sintoma>
+                <sintoma>Outro</sintoma>
+            </sintomas>
+            <receita>Diclofenaco Sódio</receita>
+            <id>daa3fab2c2181a3ab35cd820f03c4368</id>
+            <hora>18:10</hora>
+            <data>2020-07-17</data>
+            <observacao>Não definido</observacao>
+            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
+            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
+            <outro>efgerg</outro>
+        </consulta>
+        <consulta>
+            <sintomas>
+                <sintoma>Febre</sintoma>
+                <sintoma>Dor no Corpo</sintoma>
+                <sintoma>Dor no Peito</sintoma>
+                <sintoma>Dor de Barriga</sintoma>
+                <sintoma>Náusea</sintoma>
+                <sintoma>Outro</sintoma>
+            </sintomas>
+            <receita>Ablock</receita>
+            <id>524c841fc189315b514a03eebbd0ed48</id>
+            <hora>18:10</hora>
+            <data>2020-07-17</data>
+            <observacao>Não definido</observacao>
+            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
+            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
+            <outro>efgerg</outro>
+        </consulta>
+    </consultas>
+</dados>
