@@ -23,7 +23,6 @@ if ($_SESSION['type'] != 'admin') {
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/form.css">
     <link rel="stylesheet" href="../../assets/css/sidebar.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/table.css">
     <link rel="stylesheet" href="../../assets/css/topbar.css">
 
@@ -73,45 +72,41 @@ if ($_SESSION['type'] != 'admin') {
     <p class="h1 pr-5 ">Cadastro de paciente</p>
   </div>
 
-  <form class="m-4">
+  <form class="m-4" method="POST" action="../../register/Patient.php">
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email" placeholder="Email">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Nome completo</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="Nome">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputPassword4">Endereço</label>
-        <input type="text" class="form-control" id="inputPassword4" placeholder="Avenida, Rua">
+        <label for="name">Nome completo</label>
+        <input type="text" class="form-control" name="name" placeholder="Nome">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Telefone</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="(99)99999-9999">
+        <label for="phone">Telefone</label>
+        <input type="text" class="form-control" name="phone" placeholder="(99)99999-9999">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Gênero</label>
-        <input type="text" class="form-control" id="inputPassword4" placeholder="Masculino,Feminino">
+        <label for="gender">Gênero</label>
+        <input type="text" class="form-control" name="gender" placeholder="Masculino,Feminino">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Idade</label>
-        <input type="text" class="form-control" id="inputPassword4" placeholder="18">
+        <label for="data_nasc">Data de nascimento</label>
+        <input type="text" class="form-control" name="date_nasc" placeholder="16/01/1995">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputEmail4">CPF</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="CPF">
+        <label for="cpf">CPF</label>
+        <input type="text" class="form-control" name="cpf" placeholder="CPF">
       </div>
     </div>
 
