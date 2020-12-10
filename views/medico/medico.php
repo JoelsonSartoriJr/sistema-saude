@@ -70,36 +70,33 @@ if ($_SESSION['type'] != 'doctor') {
     <p class="h1 pr-5 ">Lista de consultas</p>
   </div>
 
-  <table class="table table-striped bg-white m-2 ">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive p-2">
+    <table id="datas" class="table table-striped bg-white" >
+      <thead class="thead-dark">
+        <th>Paciente</th>
+        <th>Sintomas</th>
+        <th>Hora</th>
+        <th>Data</th>
+      </thead>
+      <?php
+        $xml = simplexml_load_file('../../date/date.xml')  or die ("Failed to load");
+        $consultions = $xml->consultions;
+        console_log($consultions);
+        foreach($consultions->consultion as $consultion){
+          $patient = $consultion->patient;
+          $symptoms = $consultion->symptoms;
+          $hora = $consultion->hour;
+          $data = $consultion->date;
+          ?>
+          <tr>
+            <td> <?php echo $patient ;?> </td>
+            <td> <?php echo $symptoms ;?> </td>
+            <td> <?php echo $hora ;?> </td>
+            <td> <?php echo $data ;?> </td>
+          </tr>
+        <?php }?>
+      </table>
+  </div>
 </div>
 
 </div>
