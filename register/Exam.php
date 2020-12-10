@@ -4,7 +4,7 @@ session_start();
 
 
 require_once '../utils/Utils.php';
-require_once '../model/Exam.php.php';
+require_once '../model/Exam.php';
 
 try {
 
@@ -26,7 +26,7 @@ try {
         $type_exam = $_POST['type_exam'];
         $result = $_POST['result'];
 
-        $exam = new Exam($id, $lab, $patien, $doctor, $hour, $date, $obs, $others, $type_exam, $result);
+        $exam = new Exam($id, $lab, $patient, $doctor, $hour, $date, $obs, $others, $type_exam, $result);
         foreach ($exam as $key => $value){
             $exams->addChild($key, $value);
         }

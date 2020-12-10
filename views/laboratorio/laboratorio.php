@@ -80,7 +80,7 @@ if ($_SESSION['type'] != 'lab') {
       </thead>
       <?php
         $xml = simplexml_load_file('../../date/date.xml')  or die ("Failed to load");
-        $exames = $xml->exames;
+        $exames = $xml->exams;
         $qnt = count($exames->exame);
         foreach($exames->exame as $exame){
           $patient = $exame->patient;

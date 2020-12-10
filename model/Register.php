@@ -1,7 +1,7 @@
 <?php
 
 class Register{
-    private $id, $hour, $date, $obs, $patience_id, $doctor_id, $others;
+    public $id, $hour, $date, $obs, $patience_id, $doctor_id, $others;
 
     public function __construct($id, $patience_id, $doctor_id, $hour, $date, $obs,$others)
     {

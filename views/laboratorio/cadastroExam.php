@@ -76,8 +76,8 @@ $doctor = $xml->xpath("//user[type = 'doctor']");
       <p class="h1 pr-5 ">Cadastro de Exames</p>
     </div>
 
-    <form class="m-4 " method="POST" action="../../register/Exam.php">
-      <div class="form-row">
+    <form class="m-4 text-center needs-validation"   method="POST" action="../../register/Exam.php">
+      <div class="form-row pt-2">
         <div class="form-group col">
           <label for="inputState">Laborátorio</label>
           <select name="lab" class="form-control">
@@ -102,7 +102,7 @@ $doctor = $xml->xpath("//user[type = 'doctor']");
         </div>
         <div class="form-group col">
           <label for="inputState">Médico</label>
-          <select name="patient" class="form-control">
+          <select name="doctor" class="form-control">
             <?php
               foreach($doctor as $user){
                 $name_doctor = $user->name;
@@ -112,7 +112,35 @@ $doctor = $xml->xpath("//user[type = 'doctor']");
           </select>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Cadastrar</button>
+      <div class="form-row pt-2">
+        <div class="form-group col">
+          <label>Hora</label>
+          <input type="time" name="hour" class="form-control" required/>
+        </div>
+        <div class="form-group col">
+          <label>Data</label>
+          <input type="date" name="date" class="form-control" required/>
+        </div>
+        <div class="form-group col">
+          <label>Tipo exame</label>
+          <input type="text" name="type_exam" class="form-control" required/>
+        </div>
+      </div>
+      <div class="form-row pt-2">
+        <div class="form-group col">
+          <label>Observação</label>
+          <textarea type="text" name="obs" class="form-control" required rows="4"></textarea>
+        </div>
+        <div class="form-group col">
+          <label>Outros</label>
+          <textarea type="text" name="others" class="form-control" required rows="4"></textarea>
+        </div>
+        <div class="form-group col">
+          <label>Resultados</label>
+          <textarea  type="text" name="result" class="form-control" require rows="4"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-4">Cadastrar</button>
     </form>
   </div>
 
