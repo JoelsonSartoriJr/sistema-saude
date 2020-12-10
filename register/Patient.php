@@ -18,6 +18,8 @@ try {
             if(count($node) > 0){
                 console_log('Usúario já existe...');
             }else{
+                $user = $xml->users->addChild('user');
+
                 $id = md5(uniqid(""));
                 $type = 'patient';
                 $name = $_POST['name'];
@@ -28,12 +30,20 @@ try {
                 $cpf = $_POST['cpf'];
 
                 $patient = new Patient($id, $type, $name, $phone, $email,$password, $gender, $date_nasc, $cpf);
-                console_log($patient);
+
+                foreach ($patient as $key => $value){
+                    $user->addChild($key, $value);
+                }
+                console_log('ok');
             }
+            $xml->asXML('../date/date.xml');
+            
+            console_log("O paciente".$name."foi adicionado com sucesso no banco de dados");
         }
     } else {
         console_log('Erro ao conectar ao bando de dados.....');
     }
+    header("Location: http://localhost:8080/views/admin/admin.php");
 
 } catch (Throwable $e) {
     console_log('Throwable'.$e);

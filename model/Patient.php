@@ -3,7 +3,7 @@
 require_once('Pessoa.php');
 
 class Patient extends Pessoa{
-    private $gender, $date_nasc, $cpf;
+    public $gender, $date_nasc, $cpf;
 
     public function __construct($id, $type, $name, $phone, $email, $password, $gender, $date_nasc, $cpf)
     {

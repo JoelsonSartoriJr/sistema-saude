@@ -1,7 +1,7 @@
 <?php
 
 class Pessoa{
-    private $id, $type, $name, $phone, $email, $password;
+    public $id, $type, $name, $phone, $email, $password;
 
     public function __construct($id, $type, $name, $phone, $email, $password)
     {
