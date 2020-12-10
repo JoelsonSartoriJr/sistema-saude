@@ -74,8 +74,8 @@ if ($_SESSION['type'] != 'admin') {
           </div>
 
           <div class="table-responsive p-2">
-            <table id="datas" class="table table-striped table-dark" >
-              <thead style="color:black;" >
+            <table id="datas" class="table table-striped bg-white" >
+              <thead class="thead-dark" >
                 <th>id</th>
                 <th>e-mail</th>
                 <th>Especialidade</th>
