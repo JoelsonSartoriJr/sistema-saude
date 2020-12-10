@@ -96,7 +96,7 @@ if ($_SESSION['type'] != 'admin') {
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="phone">Telefone</label>
-        <input type="text" class="form-control" name="phone" placeholder="(99)99999-9999" required>
+        <input type="text" class="form-control" name="phone" placeholder="(53)99606-9494" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$" required>
       </div>
       <div class="form-group col-md-6">
         <label for="gender">Gênero</label>
