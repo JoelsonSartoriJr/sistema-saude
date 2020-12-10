@@ -14,7 +14,7 @@ if ($_SESSION['type'] != 'lab') {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <title>Title</title>
     <!-- Required meta tags -->
@@ -39,7 +39,7 @@ if ($_SESSION['type'] != 'lab') {
   <div class=" logo d-flex justify-content-center rounded-circle">
     <img src="../../assets/img/medica.jpg" class="rounded-circle">
     <div class="nome">
-      <p class="font-weight-bold"> Boa Vida</p>
+      <p class="font-weight-bold"><?php echo $_SESSION['name']?></p>
       <p>Laboratório</p>
     </div>
   </div>
@@ -47,15 +47,19 @@ if ($_SESSION['type'] != 'lab') {
 
     <div class="d-flex pl-4 justify-content-center dest">
       <ion-icon name="reader-outline"></ion-icon>
-      <a href="admin" class="d-block text-light p-3">Histórico de consultas</a>
+      <a href="laboratorio.php" class="d-block text-light p-3">Histórico de consultas</a>
     </div>
     <div class="d-flex pl-4 justify-content-center">
       <ion-icon name="flask-outline"></ion-icon>
-      <a href="laboratorio" class="d-block text-light p-3">Cadastro de exames</a>
+      <a href="cadastroCon.php" class="d-block text-light p-3">Cadastro de exames</a>
     </div>
     <div class="d-flex justify-content-center">
       <ion-icon ion-icon name="fitness-outline"></ion-icon>
-      <a href="#" class="d-block text-light p-3">Alterar cadastro</a>
+      <a href="alteraCadastro.php" class="d-block text-light p-3">Alterar cadastro</a>
+    </div>
+    <div class="d-flex justify-content-center">
+      <ion-icon name="person-outline"></ion-icon>
+      <a href="../../index.php" class="d-block text-light p-3">Sair</a>
     </div>
 
   </div>

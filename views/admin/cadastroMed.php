@@ -14,7 +14,7 @@ if ($_SESSION['type'] != 'admin') {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <title>Title</title>
     <!-- Required meta tags -->
@@ -38,7 +38,7 @@ if ($_SESSION['type'] != 'admin') {
   <div class="logo d-flex justify-content-center rounded-circle">
     <img src="/assets/img/medica.jpg" class="rounded-circle">
     <div class="nome">
-      <p class="font-weight-bold"> Joana Silveira</p>
+      <p class="font-weight-bold"><?php echo $_SESSION['name']?></p>
       <p>Admin</p>
     </div>
   </div>

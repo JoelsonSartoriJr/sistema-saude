@@ -15,9 +15,11 @@ try {
 
             if(count($node) > 0){
                 $id = (string)$node[0]->id;
+                $name = (string)$node[0]->name;
                 $type = (string)$node[0]->type;
                 
                 $_SESSION['user'] = $id;
+                $_SESSION['name'] = $name;
                 $_SESSION['type'] = $type;
 
                 if($type == 'admin'){

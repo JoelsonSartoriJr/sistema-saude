@@ -21,6 +21,12 @@ if ($_SESSION['type'] != 'patient') {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/form.css">
+    <link rel="stylesheet" href="../../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/table.css">
+    <link rel="stylesheet" href="../../assets/css/topbar.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
@@ -32,31 +38,23 @@ if ($_SESSION['type'] != 'patient') {
   <div class=" logo d-flex justify-content-center rounded-circle">
     <img src="/assets/img/medica.jpg" class="rounded-circle">
     <div class="nome">
-      <p class="font-weight-bold"> Joana Silveira</p>
+      <p class="font-weight-bold"><?php echo $_SESSION['name']?></p>
       <p>Paciente</p>
     </div>
   </div>
   <div class="menu">
 
     <div class="d-flex pl-4 justify-content-center">
-      <ion-icon name="reader-outline"></ion-icon>
-      <a href="admin" class="d-block text-light p-3">Lista de Cadastrados</a>
+      <ion-icon name="flask-outline"></ion-icon>
+      <a href="paciente.php" class="d-block text-light p-3">Historico de Exames</a>
     </div>
     <div class="d-flex pl-4 justify-content-center">
       <ion-icon name="flask-outline"></ion-icon>
-      <a href="laboratorio" class="d-block text-light p-3">Cadastro Laboratório</a>
-    </div>
-    <div class="d-flex justify-content-center">
-      <ion-icon ion-icon name="fitness-outline"></ion-icon>
-      <a href="#" class="d-block text-light p-3">Cadastro Médico</a>
+      <a href="histCon.php" class="d-block text-light p-3">Historico de consultas</a>
     </div>
     <div class="d-flex justify-content-center">
       <ion-icon name="person-outline"></ion-icon>
-      <a href="#" class="d-block text-light p-3">Cadastro Paciente</a>
-    </div>
-    <div class="d-flex justify-content-center">
-      <ion-icon name="reader-outline"></ion-icon>
-      <a href="#" class="d-block text-light p-3">Cadastro Consulta</a>
+      <a href="../../index.php" class="d-block text-light p-3">Sair</a>
     </div>
 
   </div>

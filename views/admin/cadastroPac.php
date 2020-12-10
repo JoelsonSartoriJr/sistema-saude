@@ -14,7 +14,7 @@ if ($_SESSION['type'] != 'admin') {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <title>Title</title>
     <!-- Required meta tags -->
@@ -38,35 +38,33 @@ if ($_SESSION['type'] != 'admin') {
   <div class="logo d-flex justify-content-center rounded-circle">
     <img src="/assets/img/medica.jpg" class="rounded-circle">
     <div class="nome">
-      <p class="font-weight-bold"> Joana Silveira</p>
+      <p class="font-weight-bold"><?php echo $_SESSION['name']?></p>
       <p>Admin</p>
     </div>
   </div>
   <div class="menu">
 
-            <div class="d-flex pl-4 justify-content-center ">
-              <ion-icon name="reader-outline"></ion-icon>
-              <a href="admin.php" class="d-block text-light p-3">Lista de Cadastrados</a>
-            </div>
-            <div class="d-flex pl-4 justify-content-center">
-              <ion-icon name="flask-outline"></ion-icon>
-              <a href="cadastroLab.php" class="d-block text-light p-3">Cadastro Laboratório</a>
-            </div>
-            <div class="d-flex justify-content-center">
-              <ion-icon ion-icon name="fitness-outline"></ion-icon>
-              <a href="cadastroMed.php" class="d-block text-light p-3">Cadastro Médico</a>
-            </div>
-            <div class="d-flex justify-content-center dest">
-              <ion-icon name="person-outline"></ion-icon>
-              <a href="cadastroPac.php" class="d-block text-light p-3">Cadastro Paciente</a>
-            </div>
-            <div class="d-flex justify-content-center">
-              <ion-icon name="person-outline"></ion-icon>
-              <a href="../../index.php" class="d-block text-light p-3">Sair</a>
-            </div>
-
-
-          </div>
+    <div class="d-flex pl-4 justify-content-center ">
+      <ion-icon name="reader-outline"></ion-icon>
+      <a href="admin.php" class="d-block text-light p-3">Lista de Cadastrados</a>
+    </div>
+    <div class="d-flex pl-4 justify-content-center">
+      <ion-icon name="flask-outline"></ion-icon>
+      <a href="cadastroLab.php" class="d-block text-light p-3">Cadastro Laboratório</a>
+    </div>
+    <div class="d-flex justify-content-center">
+      <ion-icon ion-icon name="fitness-outline"></ion-icon>
+      <a href="cadastroMed.php" class="d-block text-light p-3">Cadastro Médico</a>
+    </div>
+    <div class="d-flex justify-content-center dest">
+      <ion-icon name="person-outline"></ion-icon>
+      <a href="cadastroPac.php" class="d-block text-light p-3">Cadastro Paciente</a>
+    </div>
+    <div class="d-flex justify-content-center">
+      <ion-icon name="person-outline"></ion-icon>
+      <a href="../../index.php" class="d-block text-light p-3">Sair</a>
+    </div>
+  </div>
 </div>
 
 <!--Topbar + Conteúdo-->
