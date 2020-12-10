@@ -11,6 +11,7 @@ if ($_SESSION['type'] != 'admin') {
     console_log('Usuario não é administrador');
     header("Location: index.php");
 }
+
 ?>
 
 <!doctype html>
@@ -72,46 +73,35 @@ if ($_SESSION['type'] != 'admin') {
             <p class="h1 pr-5 ">Lista de cadastrados</p>
           </div>
 
-          <table class="table table-striped bg-white m-2 ">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col"></th>
-                <th scope="col">Tipo</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Endereço</th>
-                <th scope="col">Telefone</th>
-                <th scope="col">E-mail</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Médico</td>
-                <td>Otto</td>
-                <td>Avenida Itália,2111</td>
-                <td>991456578</td>
-                <td>Otto@gmail.com</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Médico</td>
-                <td>Otto</td>
-                <td>Avenida Itália,2111</td>
-                <td>991456578</td>
-                <td>Otto@gmail.com</td>
+          <div class="table-responsive p-2">
+            <table id="datas" class="table table-striped table-dark" >
+              <thead style="color:black;" >
+                <th>id</th>
+                <th>e-mail</th>
+                <th>Especialidade</th>
+                <th>Tipo de exame</th>
+              </thead>
+              <?php
+                $xml = simplexml_load_file('../../date/date.xml')  or die ("Failed to load");
+                $users = $xml->users;
+                $qnt = count($users->user);
+                $id = $email = $specialty = $type_exam = '-----';
+                foreach($users->user as $user){
+                  $id = $user->id;
+                  $email = $user->email;
+                  $specialty = $user->specialty;
+                  $type_exam = $user->type_exam;
+                  ?>
+                  <tr>
+                    <td> <?php echo $id ;?> </td>
+                    <td> <?php echo $email ;?> </td>
+                    <td> <?php echo $specialty ;?> </td>
+                    <td> <?php echo $type_exam ;?> </td>
+                  </tr>
+                <?php }?>
 
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Médico</td>
-                <td>Otto</td>
-                <td>Avenida Itália,2111</td>
-                <td>991456578</td>
-                <td>Otto@gmail.com</td>
-
-              </tr>
-            </tbody>
-          </table>
+            </table>
+          </div>
       </div>
     </div>
     <!-- Optional JavaScript -->
