@@ -73,7 +73,7 @@ if ($_SESSION['type'] != 'admin') {
       <p class="h1 pr-5 ">Cadastro de Laboratórios</p>
     </div>
 
-    <form class="m-4" method="POST" action="../../register/Laboratorio.php">
+    <form class="m-4" method="POST" action="../../register/Laboratory .php">
       <div class="form-row" >
         <div class="form-group col-md-6">
           <label for="inputEmail">Email</label>
