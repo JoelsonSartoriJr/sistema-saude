@@ -1,13 +1,13 @@
 <?php
 
 class Register{
-    public $id, $hour, $date, $obs, $patience_id, $doctor_id, $others;
+    public $id, $hour, $date, $obs, $patient, $doctor, $others;
 
-    public function __construct($id, $patience_id, $doctor_id, $hour, $date, $obs,$others)
+    public function __construct($id, $patient, $doctor, $hour, $date, $obs,$others)
     {
         $this->id = $id;
-        $this->patience_id = $patience_id;
-        $this->doctor_id = $doctor_id;
+        $this->patient = $patient;
+        $this->doctor = $doctor;
         $this->hour = $hour;
         $this->date = $date;
         $this->obs = $obs;

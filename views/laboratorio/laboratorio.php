@@ -71,8 +71,8 @@ if ($_SESSION['type'] != 'lab') {
   </div>
 
   <div class="table-responsive p-2">
-    <table id="datas" class="table table-striped table-dark" >
-      <thead style="color:black;" >
+    <table id="datas" class="table table-striped bg-white" >
+      <thead class="thead-dark">
         <th>Paciente</th>
         <th>Tipo de exame</th>
         <th>Resultado</th>
@@ -81,12 +81,12 @@ if ($_SESSION['type'] != 'lab') {
       <?php
         $xml = simplexml_load_file('../../date/date.xml')  or die ("Failed to load");
         $exames = $xml->exams;
-        $qnt = count($exames->exame);
-        foreach($exames->exame as $exame){
+        console_log($exames);
+        foreach($exames->exam as $exame){
           $patient = $exame->patient;
           $type_exam = $exame->type_exam;
           $result = $exame->result;
-          $data = $exame->data;
+          $data = $exame->date;
           ?>
           <tr>
             <td> <?php echo $patient ;?> </td>
