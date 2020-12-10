@@ -25,12 +25,13 @@ try {
                 $type = 'patient';
                 $name = $_POST['name'];
                 $phone = $_POST['phone'];
+                $address = $_POST['address'];
                 $password = $_POST['password'];
                 $gender = $_POST['gender'];
                 $date_nasc = $_POST['date_nasc'];
                 $cpf = $_POST['cpf'];
 
-                $patient = new Patient($id, $type, $name, $phone, $email,$password, $gender, $date_nasc, $cpf);
+                $patient = new Patient($id, $type, $name, $phone, $email,$address, $password, $gender, $date_nasc, $cpf);
 
                 foreach ($patient as $key => $value){
                     $user->addChild($key, $value);

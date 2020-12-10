@@ -90,7 +90,7 @@ if ($_SESSION['type'] != 'admin') {
       </div>
       <div class="form-group col-md-6">
           <label for="inputPassword4">Endereço</label>
-          <input type="text" class="form-control" id="inputPassword4" placeholder="Avenida, Número">
+          <input type="text" class="form-control" name="address" placeholder="Avenida, Número">
         </div>
     </div>
     <div class="form-row">
