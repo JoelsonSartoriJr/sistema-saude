@@ -2,6 +2,7 @@
 
 session_start();
 
+
 require_once '../utils/Utils.php';
 require_once '../model/Patient.php';
 

@@ -3,66 +3,27 @@
     <users>
         <user>
             <id>A7CBCF56CD2840709A10A34ACD7E4DB9</id>
-            <tipo>admin</tipo>
-            <email>admin@admin.com</email>
+            <type>admin</type>
+            <email>admin@email.com</email>
             <password>admin</password>
         </user>
         <user>
-            <especialidade>Alergia e Imunologia</especialidade>
-            <crm>5165165156151</crm>
-            <id>01678638c3870972a45cfd72b51837f7</id>
-            <tipo>medico</tipo>
-            <nome>Andre Becker</nome>
-            <telefone>(55) 9999-9528</telefone>
-            <rua>Av. Presidente Vargas</rua>
-            <numero>5</numero>
-            <bairro>Centro</bairro>
-            <complemento>Ap 101</complemento>
-            <cidade>Rio Grande</cidade>
-            <estado>RS</estado>
-            <cep>96.202-336</cep>
-            <email>medico@hotmail.com</email>
-            <senha>medico</senha>
+            <id>A7CBCF56CD2840709A10A34ACD7E4DB9</id>
+            <type>doctor</type>
+            <email>doctor@email.com</email>
+            <password>doctor</password>
         </user>
         <user>
-            <genero>masculino</genero>
-            <datanascimento>2020-07-07</datanascimento>
-            <cpf>032.343.730-35</cpf>
-            <id>ccf988db96cb0004d60b03d259522e4c</id>
-            <tipo>paciente</tipo>
-            <nome>Alceu Pinto</nome>
-            <telefone>(55) 9991-9528</telefone>
-            <rua>Av. Presidente Vargas</rua>
-            <numero>55</numero>
-            <bairro>Cristo Rei</bairro>
-            <complemento>Ap 70</complemento>
-            <cidade>Rio Grande</cidade>
-            <estado>RS</estado>
-            <cep>96.202-336</cep>
-            <email>alceupinto@hotmail.com</email>
-            <senha>paciente</senha>
+            <id>A7CBCF56CD2840709A10A34ACD7E4DB9</id>
+            <type>lab</type>
+            <email>lab@email.com</email>
+            <password>lab</password>
         </user>
         <user>
-            <tipoexame>
-                <tipo>TEMPO DE TROMBOPLASTINA ATIVADA (PTTA)</tipo>
-                <tipo>DOSAGEM DE ACIDO URICO</tipo>
-                <tipo>DOSAGEM DE ALFA-1-GLICOPROTEINA ACIDA</tipo>
-                <tipo>DOSAGEM DE AMILASE</tipo>
-            </tipoexame>
-            <cnpj>84.884.884/8171-89</cnpj>
-            <id>fbf374902ed7065542fe81a62d7219f4</id>
-            <tipo>laboratorio</tipo>
-            <nome>Lab LTDA</nome>
-            <telefone>(55) 9891-9528</telefone>
-            <rua>Av. Presidente Vargas, 66</rua>
-            <numero>5</numero>
-            <bairro>asdasd</bairro>
-            <complemento>Sl 5</complemento>
-            <cidade>Rio Grande</cidade>
-            <estado>RS</estado>
-            <cep>96.202-336</cep>
-            <email>lab@hotmail.com</email>
-            <senha>laboratorio</senha>
+            <id>A7CBCF56CD2840709A10A34ACD7E4DB9</id>
+            <type>patient</type>
+            <email>patient@email.com</email>
+            <password>patient</password>
         </user>
     </users>
     <exames>
@@ -233,4 +194,4 @@
             <outro>efgerg</outro>
         </consulta>
     </consultas>
-</dados>
+</date>

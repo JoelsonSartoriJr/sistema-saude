@@ -25,7 +25,7 @@
             <email>patient@email.com</email>
             <password>patient</password>
         </user>
-    </users>
+    <user><gender>Outro</gender><date_nasc>16/01/1995</date_nasc><cpf>9999999999</cpf><id>5cd2bde8791044140c29a07f9b2cde65</id><type>patient</type><name>teste teste</name><phone>999999999</phone><email>teste@email.com</email><password>teste</password></user></users>
     <exames>
         <exame>
             <tipoexame><tipo>DOSAGEM DE ACIDO URICO</tipo></tipoexame>
