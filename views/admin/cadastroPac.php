@@ -72,45 +72,45 @@ if ($_SESSION['type'] != 'admin') {
     <p class="h1 pr-5 ">Cadastro de paciente</p>
   </div>
 
-  <form class="m-4" method="POST" action="../../register/Patient.php">
+  <form class="m-4 text-center" method="POST" action="../../register/Patient.php">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="email">Email</label>
-        <input type="email" class="form-control" name="email" placeholder="Email">
+        <input type="email" class="form-control" name="email" placeholder="Email" required>
       </div>
       <div class="form-group col-md-6">
         <label for="password">Password</label>
-        <input type="password" class="form-control" name="password" placeholder="Password">
+        <input type="password" class="form-control" name="password" placeholder="Password" required>
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="name">Nome completo</label>
-        <input type="text" class="form-control" name="name" placeholder="Nome">
+        <input type="text" class="form-control" name="name" placeholder="Nome" required>
       </div>
       <div class="form-group col-md-6">
           <label for="inputPassword4">Endereço</label>
-          <input type="text" class="form-control" name="address" placeholder="Avenida, Número">
+          <input type="text" class="form-control" name="address" placeholder="Avenida, Número" required>
         </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="phone">Telefone</label>
-        <input type="text" class="form-control" name="phone" placeholder="(99)99999-9999">
+        <input type="text" class="form-control" name="phone" placeholder="(99)99999-9999" required>
       </div>
       <div class="form-group col-md-6">
         <label for="gender">Gênero</label>
-        <input type="text" class="form-control" name="gender" placeholder="Masculino,Feminino">
+        <input type="text" class="form-control" name="gender" placeholder="Masculino,Feminino" required>
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="data_nasc">Data de nascimento</label>
-        <input type="text" class="form-control" name="date_nasc" placeholder="16/01/1995">
+        <input type="text" class="form-control" name="date_nasc" placeholder="16/01/1995" required>
       </div>
       <div class="form-group col-md-6">
         <label for="cpf">CPF</label>
-        <input type="text" class="form-control" name="cpf" placeholder="CPF">
+        <input type="text" class="form-control" name="cpf" placeholder="CPF" required>
       </div>
     </div>
 
