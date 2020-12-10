@@ -11,6 +11,12 @@ if ($_SESSION['type'] != 'doctor') {
     console_log('Usuario não é medico....');
     header("Location: index.php");
 }
+
+$xml = simplexml_load_file('../../date/date.xml');
+$lab = $xml->xpath("//user[type = 'lab']");
+$patient = $xml->xpath("//user[type = 'patient']");
+$doctor = $xml->xpath("//user[type = 'doctor']");
+
 ?>
 
 <!doctype html>
@@ -70,39 +76,60 @@ if ($_SESSION['type'] != 'doctor') {
       <p class="h1 pr-5 ">Cadastro consulta</p>
     </div>
 
-    <form class="m-4">
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Data</label>
-          <input type="date" class="form-control" id="inputEmail4" placeholder="">
-        </div>
-        <div class="form-group col-md-06">
-          <label for="exampleFormControlSelect1">Médico</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>Ricardo</option>
+    <form class="m-4 text-center needs-validation"   method="POST" action="../../register/Consultation.php">
+      <div class="form-row pt-2">
+        <div class="form-group col">
+          <label for="inputState">Paciente</label>
+          <select name="patient" class="form-control">
+            <?php
+              foreach($patient as $user){
+                $name_patient = $user->name;
+            ?>
+            <option selected><?php echo $name_patient; ?></option>
+            <?php } ?>
           </select>
+        </div>
+        <div class="form-group col">
+          <label for="inputState">Médicx</label>
+          <select name="doctor" class="form-control">
+            <?php
+              foreach($doctor as $user){
+                $name_doctor = $user->name;
+            ?>
+            <option selected><?php echo $name_doctor; ?></option>
+            <?php } ?>
+          </select>
+        </div>
+        <div class="form-group col">
+          <label>Sintomas</label>
+          <input  type="text" name="symptoms" class="form-control" required/>
         </div>
       </div>
-      <div class="form-row">
-        <div class="form-group col-md-06">
-          <label for="exampleFormControlSelect1">Paciente</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>Joana Silveira</option>
-          </select>
+      <div class="form-row pt-2">
+        <div class="form-group col">
+          <label>Hora</label>
+          <input type="time" name="hour" class="form-control" required/>
         </div>
-        <div class="form-group col-md-06">
-          <label for="exampleFormControlSelect1">Receita</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>Dipirona</option>
-            <option>Paracetamol</option>
-          </select>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Observações</label>
-          <input type="text" class="form-control" id="inputEmail4" placeholder="Necessita tomar a cada 8 horas">
+        <div class="form-group col">
+          <label>Data</label>
+          <input type="date" name="date" class="form-control" required/>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Cadastrar</button>
+      <div class="form-row pt-2">
+        <div class="form-group col">
+          <label>Observação</label>
+          <textarea type="text" name="obs" class="form-control" required rows="4"></textarea>
+        </div>
+        <div class="form-group col">
+          <label>Outros</label>
+          <textarea type="text" name="others" class="form-control" required rows="4"></textarea>
+        </div>
+        <div class="form-group col">
+          <label>Receita</label>
+          <textarea  type="text" name="recipe" class="form-control" require rows="4"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-4">Cadastrar</button>
     </form>
   </div>
 

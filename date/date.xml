@@ -11,58 +11,7 @@
     <user><specialty>Ginecologia</specialty><name>Médico</name><crm>87654321</crm><id>ac1a2a28ebaf88094c42b45de9a49ee9</id><type>doctor</type><phone>(99)999999999</phone><email>doctor@email.com</email><address>Av Rio Grande, 655</address><password>doctor</password></user><user><type_exam>Ressonância Magnética</type_exam><cnpj>12345678</cnpj><name>Laboratorio</name><id>76bef2bc1bd5837dd10f3ca872210a40</id><type>lab</type><phone>(99)999999999</phone><email>lab@email.com</email><address>Av Rio Grande, 655</address><password>lab</password></user><user><type_exam>Ultra-sonografia</type_exam><cnpj>87654321</cnpj><name>Laboratorio2</name><id>afb7c67c98f1c42d6cb3ae76b162e344</id><type>lab</type><phone>(99)999999999</phone><email>lab2@email.com</email><address>Av Rio Grande, 655</address><password>lab</password></user></users>
     <exams>
    <exam><type_exam>sangue</type_exam><result>Deu ruim</result><lab>Laboratorio2</lab><lab_id>76bef2bc1bd5837dd10f3ca872210a40</lab_id><id>e656c938f64c3f3a2316e3c3f9ee1241</id><hour>18:49</hour><date>2020-12-11</date><obs>Muito sangue</obs><patient>patient</patient><doctor>Médico</doctor><others>Sangue verde</others></exam></exams>
-    <consultas>
-        <consulta>
-            <sintomas>
-                <sintoma>Febre</sintoma>
-                <sintoma>Dor no Corpo</sintoma>
-                <sintoma>Dor de Barriga</sintoma>
-                <sintoma>Náusea</sintoma>
-                <sintoma>Outro</sintoma>
-            </sintomas>
-            <receita>Paracetamol</receita>
-            <id>d1dd403bd5d603d7b8b596bd989c23ce</id>
-            <hora>18:10</hora>
-            <data>2020-07-17</data>
-            <observacao>Não definido</observacao>
-            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
-            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
-            <outro>Desconhecido</outro>
-        </consulta>
-        <consulta>
-            <sintomas>
-                <sintoma>Febre</sintoma>
-                <sintoma>Dor no Corpo</sintoma>
-                <sintoma>Dor no Peito</sintoma>
-                <sintoma>Dor de Barriga</sintoma>
-                <sintoma>Outro</sintoma>
-            </sintomas>
-            <receita>Diclofenaco Sódio</receita>
-            <id>daa3fab2c2181a3ab35cd820f03c4368</id>
-            <hora>18:10</hora>
-            <data>2020-07-17</data>
-            <observacao>Não definido</observacao>
-            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
-            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
-            <outro>efgerg</outro>
-        </consulta>
-        <consulta>
-            <sintomas>
-                <sintoma>Febre</sintoma>
-                <sintoma>Dor no Corpo</sintoma>
-                <sintoma>Dor no Peito</sintoma>
-                <sintoma>Dor de Barriga</sintoma>
-                <sintoma>Náusea</sintoma>
-                <sintoma>Outro</sintoma>
-            </sintomas>
-            <receita>Ablock</receita>
-            <id>524c841fc189315b514a03eebbd0ed48</id>
-            <hora>18:10</hora>
-            <data>2020-07-17</data>
-            <observacao>Não definido</observacao>
-            <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
-            <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
-            <outro>efgerg</outro>
-        </consulta>
-    </consultas>
+    <consultions>
+        
+    <consultion><symptoms>nenhum</symptoms><recipe>nenhuma receita</recipe><patience_id>5d9abd91e5dc4349af328af6c4ab0b42</patience_id><doctor_id>ac1a2a28ebaf88094c42b45de9a49ee9</doctor_id><id>223ef380e96124ce48e9e78a901c32e5</id><hour>19:33</hour><date>2020-12-11</date><obs>nanhuma obs</obs><patient>patient</patient><doctor>Médico</doctor><others>nenhum outro</others></consultion></consultions>
 </date>
