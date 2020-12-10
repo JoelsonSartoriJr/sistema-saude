@@ -78,6 +78,7 @@ if ($_SESSION['type'] != 'admin') {
               <thead class="thead-dark" >
                 <th>id</th>
                 <th>e-mail</th>
+                <th>tipo</th>
                 <th>Especialidade</th>
                 <th>Tipo de exame</th>
               </thead>
@@ -89,12 +90,14 @@ if ($_SESSION['type'] != 'admin') {
                 foreach($users->user as $user){
                   $id = $user->id;
                   $email = $user->email;
+                  $type = $user->type;
                   $specialty = $user->specialty;
                   $type_exam = $user->type_exam;
                   ?>
                   <tr>
                     <td> <?php echo $id ;?> </td>
                     <td> <?php echo $email ;?> </td>
+                    <td> <?php echo $type ;?> </td>
                     <td> <?php echo $specialty ;?> </td>
                     <td> <?php echo $type_exam ;?> </td>
                   </tr>
