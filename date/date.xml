@@ -8,9 +8,9 @@
             <password>admin</password>
         </user>
     <user><name>patient</name><gender>Outro</gender><date_nasc>16/01/1995</date_nasc><cpf>9999999999</cpf><id>5d9abd91e5dc4349af328af6c4ab0b42</id><type>patient</type><phone>(99)999999999</phone><email>patient@email.com</email><address>Rua Senhor dos Passos</address><password>patient</password></user>
-    <user><type_exam>Ressonância Magnética</type_exam><cnpj>12345678</cnpj><id>771a87bb1897a54e3f68e5cb67b5e426</id><type>lab</type><phone>(99)999999999</phone><email>lab@email.com</email><address>Av Rio Grande, 655</address><password>lab</password></user><user><specialty>Ginecologia</specialty><name>Médico</name><crm>87654321</crm><id>ac1a2a28ebaf88094c42b45de9a49ee9</id><type>doctor</type><phone>(99)999999999</phone><email>doctor@email.com</email><address>Av Rio Grande, 655</address><password>doctor</password></user></users>
+    <user><specialty>Ginecologia</specialty><name>Médico</name><crm>87654321</crm><id>ac1a2a28ebaf88094c42b45de9a49ee9</id><type>doctor</type><phone>(99)999999999</phone><email>doctor@email.com</email><address>Av Rio Grande, 655</address><password>doctor</password></user><user><type_exam>Ressonância Magnética</type_exam><cnpj>12345678</cnpj><name>Laboratorio</name><id>76bef2bc1bd5837dd10f3ca872210a40</id><type>lab</type><phone>(99)999999999</phone><email>lab@email.com</email><address>Av Rio Grande, 655</address><password>lab</password></user><user><type_exam>Ultra-sonografia</type_exam><cnpj>87654321</cnpj><name>Laboratorio2</name><id>afb7c67c98f1c42d6cb3ae76b162e344</id><type>lab</type><phone>(99)999999999</phone><email>lab2@email.com</email><address>Av Rio Grande, 655</address><password>lab</password></user></users>
     <exames>
-        <exame>
+        <exam>
             <tipoexame><tipo>DOSAGEM DE ACIDO URICO</tipo></tipoexame>
             <resultado>apto</resultado>
             <laboratorioid>fbf374902ed7065542fe81a62d7219f4</laboratorioid>
@@ -21,8 +21,8 @@
             <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
             <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
             <outro>Não Definido</outro>
-        </exame>
-        <exame>
+        </exam>
+        <exam>
             <tipoexame>
                 <tipo>TEMPO DE TROMBOPLASTINA ATIVADA (PTTA)</tipo>
             </tipoexame>
@@ -35,8 +35,8 @@
             <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
             <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
             <outro/>
-        </exame>
-        <exame>
+        </exam>
+        <exam>
             <tipoexame>
                 <tipo>TEMPO DE TROMBOPLASTINA ATIVADA (PTTA)</tipo>
             </tipoexame>
@@ -49,8 +49,8 @@
             <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
             <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
             <outro/>
-        </exame>
-        <exame>
+        </exam>
+        <exam>
             <tipoexame>
                 <tipo>DOSAGEM DE ACIDO URICO</tipo>
                 <tipo>DOSAGEM DE ALFA-1-GLICOPROTEINA ACIDA</tipo>
@@ -65,8 +65,8 @@
             <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
             <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
             <outro/>
-        </exame>
-        <exame>
+        </exam>
+        <exam>
             <tipoexame>
                 <tipo>TEMPO DE TROMBOPLASTINA ATIVADA (PTTA)</tipo>
             </tipoexame>
@@ -79,8 +79,8 @@
             <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
             <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
             <outro/>
-        </exame>
-        <exame>
+        </exam>
+        <exam>
             <tipoexame>
                 <tipo>TEMPO DE TROMBOPLASTINA ATIVADA (PTTA)</tipo>
             </tipoexame>
@@ -93,8 +93,8 @@
             <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
             <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
             <outro/>
-        </exame>
-        <exame>
+        </exam>
+        <exam>
             <tipoexame>
                 <tipo>DOSAGEM DE ACIDO URICO</tipo>
             </tipoexame>
@@ -107,8 +107,8 @@
             <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
             <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
             <outro>sada</outro>
-        </exame>
-        <exame>
+        </exam>
+        <exam>
             <tipoexame>
                 <tipo>DOSAGEM DE ACIDO URICO</tipo>
             </tipoexame>
@@ -121,7 +121,7 @@
             <pacienteid>ccf988db96cb0004d60b03d259522e4c</pacienteid>
             <medicoid>01678638c3870972a45cfd72b51837f7</medicoid>
             <outro/>
-        </exame>
+        </exam>
     </exames>
     <consultas>
         <consulta>
