@@ -22,13 +22,14 @@ try {
                 $user = $xml->users->addChild('user');
                 $id = md5(uniqid(""));
                 $type = 'lab';
+                $name = $_POST['name'];
                 $phone = $_POST['phone'];
                 $email = $_POST['email'];
                 $address = $_POST['address'];
                 $password = $_POST['password'];
                 $type_exam = $_POST['type_exam'];
 
-                $lab = new Lab($id, $type, $phone, $email,$address, $password, $type_exam, $cnpj);
+                $lab = new Lab($id, $name, $type, $phone, $email,$address, $password, $type_exam, $cnpj);
 
                 foreach ($lab as $key => $value){
                     $user->addChild($key, $value);
