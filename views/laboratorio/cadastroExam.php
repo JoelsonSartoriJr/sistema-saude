@@ -11,6 +11,12 @@ if ($_SESSION['type'] != 'lab') {
     console_log('Usuario não é laboratorio...');
     header("Location: index.php");
 }
+
+$xml = simplexml_load_file('../../date/date.xml');
+$lab = $xml->xpath("//user[type = 'lab']");
+$patient = $xml->xpath("//user[type = 'patient']");
+$doctor = $xml->xpath("//user[type = 'doctor']");
+
 ?>
 
 <!doctype html>
@@ -70,36 +76,40 @@ if ($_SESSION['type'] != 'lab') {
       <p class="h1 pr-5 ">Cadastro de Exames</p>
     </div>
 
-    <form class="m-4">
+    <form class="m-4 " method="POST" action="../../register/Exam.php">
       <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Data</label>
-          <input type="date" class="form-control" id="inputEmail4" placeholder="">
-        </div>
-        <div class="form-group col-md-06">
-          <label for="exampleFormControlSelect1">Laboratório</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>Boa vida</option>
+        <div class="form-group col">
+          <label for="inputState">Laborátorio</label>
+          <select name="lab" class="form-control">
+            <?php
+              foreach($lab as $user){
+                $name_lab = $user->name;
+            ?>
+            <option selected><?php echo $name_lab; ?></option>
+            <?php } ?>
           </select>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-06">
-          <label for="exampleFormControlSelect1">Paciente</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>Joana Silveira</option>
+        <div class="form-group col">
+          <label for="inputState">Paciente</label>
+          <select name="patient" class="form-control">
+            <?php
+              foreach($patient as $user){
+                $name_patient = $user->name;
+            ?>
+            <option selected><?php echo $name_patient; ?></option>
+            <?php } ?>
           </select>
         </div>
-        <div class="form-group col-md-06">
-          <label for="exampleFormControlSelect1">Tipo de exame</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>Ressonância</option>
-            <option>Ultrassonografia</option>
+        <div class="form-group col">
+          <label for="inputState">Médico</label>
+          <select name="patient" class="form-control">
+            <?php
+              foreach($doctor as $user){
+                $name_doctor = $user->name;
+            ?>
+            <option selected><?php echo $name_doctor; ?></option>
+            <?php } ?>
           </select>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Resultado</label>
-          <input type="text" class="form-control" id="inputEmail4" placeholder="doença">
         </div>
       </div>
       <button type="submit" class="btn btn-primary">Cadastrar</button>

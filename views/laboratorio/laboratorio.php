@@ -70,44 +70,34 @@ if ($_SESSION['type'] != 'lab') {
     <p class="h1 pr-5 ">Histórico de consultas</p>
   </div>
 
-  <table class="table table-striped bg-white m-2 ">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col"></th>
-        <th scope="col">Data</th>
-        <th scope="col">Médico</th>
-        <th scope="col">Paciente</th>
-        <th scope="col">Receita</th>
-        <th scope="col">Observações</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>05/10/2019</td>
-        <td>Alexandre</td>
-        <td>Marcos</td>
-        <td>Dipirona</td>
-        <td>Dor de cabeça</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>05/10/2019</td>
-        <td>Alexandre</td>
-        <td>Marcos</td>
-        <td>Dipirona</td>
-        <td>Dor de cabeça</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>05/10/2019</td>
-        <td>Alexandre</td>
-        <td>Marcos</td>
-        <td>Dipirona</td>
-        <td>Dor de cabeça</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive p-2">
+    <table id="datas" class="table table-striped table-dark" >
+      <thead style="color:black;" >
+        <th>Paciente</th>
+        <th>Tipo de exame</th>
+        <th>Resultado</th>
+        <th>Data</th>
+      </thead>
+      <?php
+        $xml = simplexml_load_file('../../date/date.xml')  or die ("Failed to load");
+        $exames = $xml->exames;
+        $qnt = count($exames->exame);
+        foreach($exames->exame as $exame){
+          $patient = $exame->patient;
+          $type_exam = $exame->type_exam;
+          $result = $exame->result;
+          $data = $exame->data;
+          ?>
+          <tr>
+            <td> <?php echo $patient ;?> </td>
+            <td> <?php echo $type_exam ;?> </td>
+            <td> <?php echo $result ;?> </td>
+            <td> <?php echo $data ;?> </td>
+          </tr>
+        <?php }?>
+      </table>
+  </div>
+  
 </div>
 
 </div>
