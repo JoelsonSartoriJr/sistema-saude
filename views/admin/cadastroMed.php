@@ -105,7 +105,7 @@ if ($_SESSION['type'] != 'admin') {
     <div class="form-row">
     <div class="form-group col-md-6">
           <label for="inputTel">Telefone</label>
-          <input type="tel" class="form-control" name="phone" placeholder="(53)99606-9494" placeholder="00.000.000/0000-00" onkeypress="$(this).mask('00.000.000/0000-00')" required>
+          <input type="tel" class="form-control" name="phone" placeholder="(53)99606-9494"  onkeypress="$(this).mask('(00) 00000-0000')" required>
         </div>
       <div class="form-group col-md-6">
         <label for="exampleFormControlSelect1">Especialidade:</label>
@@ -119,7 +119,7 @@ if ($_SESSION['type'] != 'admin') {
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">CRM</label>
-        <input type="text" class="form-control" name="crm" placeholder="F054008" required>
+        <input type="text" class="form-control" name="crm" placeholder="F054008" onkeypress="$(this).mask('(00) 0000000')" required>
       </div>
     </div> 
     <button type="submit" class="btn btn-primary">Cadastrar</button>

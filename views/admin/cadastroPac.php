@@ -103,7 +103,7 @@ if ($_SESSION['type'] != 'admin') {
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="phone">Telefone</label>
-        <input type="text" class="form-control" name="phone"  placeholder="00.000.000/0000-00" onkeypress="$(this).mask('00.000.000/0000-00')" required>
+        <input type="text" class="form-control" name="phone"  placeholder="(00) 00000-0000" onkeypress="$(this).mask('(00) 00000-0000')" required>
       </div>
       <div class="form-group col-md-6">
         <label for="gender">Gênero</label>
@@ -113,7 +113,7 @@ if ($_SESSION['type'] != 'admin') {
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="data_nasc">Data de nascimento</label>
-        <input type="text" class="form-control" name="date_nasc" placeholder="16/01/1995" required>
+        <input type="date" class="form-control" name="date_nasc" placeholder="16/01/1995" required>
       </div>
       <div class="form-group col-md-6">
         <label for="cpf">CPF</label>
