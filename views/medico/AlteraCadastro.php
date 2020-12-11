@@ -35,6 +35,14 @@ console_log($info_user);
     <link rel="stylesheet" href="../../assets/css/topbar.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <?php
+    if (isset($_SESSION['erro'])) {
+    	$erro = $_SESSION['erro'];
+    	echo "<script type='text/javascript'>alert('$erro');</script>";
+    	unset($_SESSION['erro']);
+    }
+	?>
   </head>
   <body>
   <div class="d-flex bg-white">
