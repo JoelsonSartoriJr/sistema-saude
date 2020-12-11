@@ -33,7 +33,7 @@ if ($_SESSION['type'] != 'admin') {
 	    	$erro = $_SESSION['erro'];
 	    	echo "<script type='text/javascript'>alert('$erro');</script>";
 	    	unset($_SESSION['erro']);
-	    }
+      }
 	  ?>
   </head>
   <body>

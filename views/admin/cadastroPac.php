@@ -11,6 +11,7 @@ if ($_SESSION['type'] != 'admin') {
     console_log('Usuario não é administrador');
     header("Location: index.php");
 }
+
 ?>
 
 <!doctype html>
