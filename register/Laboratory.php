@@ -17,7 +17,7 @@ try {
             $node = $xml->xpath("//user[cnpj = '$cnpj']");
 
             if(count($node) > 0){
-                console_log('Laboratorio já existe...');
+                echo '<script>alert("O Láboratorio já existe!")</script>';
             }else{
                 $user = $xml->users->addChild('user');
                 $id = md5(uniqid(""));
@@ -36,7 +36,8 @@ try {
                 }
 
                 $xml->asXML('../date/date.xml');
-                console_log("O Laboratorio foi adicionado com sucesso no banco de dados");
+                echo '<script>alert("O Laboratorio foi adicionado com sucesso no banco de dados")</script>';
+                
             }
             
         }

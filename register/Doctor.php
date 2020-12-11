@@ -17,7 +17,7 @@ try {
             $node = $xml->xpath("//user[crm = '$crm']");
 
             if(count($node) > 0){
-                console_log('Médico já existe...');
+                echo '<script>alert("O médico já existe")</script>';
             }else{
                 $user = $xml->users->addChild('user');
                 $id = md5(uniqid(""));
@@ -36,7 +36,7 @@ try {
                 }
 
                 $xml->asXML('../date/date.xml');
-                console_log("O médico ".$name." foi adicionado com sucesso no banco de dados");
+                echo '<script>alert("O médico foi adicionado com sucesso no banco de dados")</script>';
             }
             
         }

@@ -19,7 +19,7 @@ try {
 
             if(count($node) > 0){
                 $name = $_POST['name'];
-                console_log('Usúario já existe...');
+                echo '<script>alert("O Paciente já existe!)</script>';
             }else{
                 $user = $xml->users->addChild('user');
 
@@ -39,7 +39,7 @@ try {
                     $user->addChild($key, $value);
                 }
                 $xml->asXML('../date/date.xml');
-                console_log("O paciente".$name."foi adicionado com sucesso no banco de dados");
+                echo '<script>alert("O Paciente foi adicionado com sucesso no banco de dados")</script>';
             }
         }
     } else {
