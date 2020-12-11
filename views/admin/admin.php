@@ -83,11 +83,14 @@ if ($_SESSION['type'] != 'admin') {
           <div class="table-responsive p-2">
             <table id="datas" class="table table-striped bg-white" >
               <thead class="thead-dark" >
-                <th>id</th>
+                <th>Nome</th>
                 <th>e-mail</th>
                 <th>tipo</th>
                 <th>Especialidade</th>
                 <th>Tipo de exame</th>
+                <th>CPF</th>
+                <th>CNPJ</th>
+                <th>CRM</th>
               </thead>
               <?php
                 $xml = simplexml_load_file('../../date/date.xml')  or die ("Failed to load");
@@ -95,18 +98,24 @@ if ($_SESSION['type'] != 'admin') {
                 $qnt = count($users->user);
                 $id = $email = $specialty = $type_exam = '-----';
                 foreach($users->user as $user){
-                  $id = $user->id;
+                  $name = $user->name;
                   $email = $user->email;
                   $type = $user->type;
                   $specialty = $user->specialty;
                   $type_exam = $user->type_exam;
+                  $cpf = $user->cpf;
+                  $cnpj = $user->cnpj;
+                  $crm = $user->crm;
                   ?>
                   <tr>
-                    <td> <?php echo $id ;?> </td>
+                    <td> <?php echo $name ;?> </td>
                     <td> <?php echo $email ;?> </td>
                     <td> <?php echo $type ;?> </td>
                     <td> <?php echo $specialty ;?> </td>
                     <td> <?php echo $type_exam ;?> </td>
+                    <td> <?php echo $cpf ;?> </td>
+                    <td> <?php echo $cnpj ;?> </td>
+                    <td> <?php echo $crm ;?> </td>
                   </tr>
                 <?php }?>
 
