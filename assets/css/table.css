@@ -1,5 +1,6 @@
 .table-responsive{
     max-width: 85vw;
+    max-height: 85vh;
 }
 
 form{
