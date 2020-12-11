@@ -32,8 +32,8 @@ try {
                     header('Location: ../views/paciente/paciente.php');
                 }
             }else{
+                echo '<script>alert("Usuario invalido!")</script>';
                 header("Location: http://localhost:8080");
-                console_log('Usúario não encontrado');
             }
         }
     } else {
