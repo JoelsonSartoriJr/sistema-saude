@@ -24,3 +24,12 @@
     false
   );
 })();
+function validar(){
+  var nome = document.getElementById('email').value;
+  var nome = document.getElementById('password').value;
+  var nome = document.getElementById('nome').value;
+  
+  if(nome==""){
+    document.getElementById('erro-nome').innerHTML = "Ops! Informe o nome"
+  }
+}

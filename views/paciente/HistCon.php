@@ -68,7 +68,7 @@ if ($_SESSION['type'] != 'patient') {
   <div class="table-responsive p-2">
     <table id="datas" class="table table-striped bg-white" >
       <thead class="thead-dark">
-        <th>Médicx</th>
+        <th>Médico</th>
         <th>Sintomas</th>
         <th>Hora</th>
         <th>Data</th>

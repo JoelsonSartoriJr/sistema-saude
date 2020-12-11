@@ -79,7 +79,7 @@ if ($_SESSION['type'] != 'admin') {
         <input type="email" class="form-control" name="email" placeholder="Email" required>
       </div>
       <div class="form-group col-md-6">
-        <label for="password">Password</label>
+        <label for="password">Senha</label>
         <input type="password" class="form-control" name="password" placeholder="Password" required>
       </div>
     </div>
@@ -110,7 +110,7 @@ if ($_SESSION['type'] != 'admin') {
       </div>
       <div class="form-group col-md-6">
         <label for="cpf">CPF</label>
-        <input type="text" class="form-control" name="cpf" placeholder="CPF" required>
+        <input type="text" class="form-control" name="cpf" placeholder="000.000.000-00" onkeypress="$(this).mask('000.000.000-00');" required>
       </div>
     </div>
 
@@ -125,6 +125,7 @@ if ($_SESSION['type'] != 'admin') {
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
   </body>
 </html>
 
