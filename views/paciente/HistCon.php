@@ -91,6 +91,7 @@ if ($_SESSION['type'] != 'patient') {
             $symptoms = $consultion->symptoms;
             $hora = $consultion->hour;
             $data = $consultion->date;
+            console_log($hora);
             ?>
             <tr>
               <td> <?php echo $doctor ;?> </td>

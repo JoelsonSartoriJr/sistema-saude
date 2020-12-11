@@ -119,7 +119,7 @@ if ($_SESSION['type'] != 'admin') {
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">CRM</label>
-        <input type="text" class="form-control" name="crm" placeholder="F054008" onkeypress="$(this).mask('(00) 0000000')" required>
+        <input type="text" class="form-control" name="crm" placeholder="F054008" onkeypress="$(this).mask('F000000')" required>
       </div>
     </div> 
     <button type="submit" class="btn btn-primary">Cadastrar</button>
