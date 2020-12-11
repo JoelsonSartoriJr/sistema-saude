@@ -91,18 +91,19 @@ if ($_SESSION['type'] != 'doctor') {
         $consultions = $xml->consultions;
         console_log($consultions);
         foreach($consultions->consultion as $consultion){
-          $patient = $consultion->patient;
-          $symptoms = $consultion->symptoms;
-          $hora = $consultion->hour;
-          $data = $consultion->date;
-          ?>
-          <tr>
-            <td> <?php echo $patient ;?> </td>
-            <td> <?php echo $symptoms ;?> </td>
-            <td> <?php echo $hora ;?> </td>
-            <td> <?php echo $data ;?> </td>
-          </tr>
-        <?php }?>
+          if($consultion->doctor_id == $_SESSION['user']){
+            $patient = $consultion->patient;
+            $symptoms = $consultion->symptoms;
+            $hora = $consultion->hour;
+            $data = $consultion->date;
+            ?>
+            <tr>
+              <td> <?php echo $patient ;?> </td>
+              <td> <?php echo $symptoms ;?> </td>
+              <td> <?php echo $hora ;?> </td>
+              <td> <?php echo $data ;?> </td>
+            </tr>
+        <?php }}?>
       </table>
   </div>
 </div>
