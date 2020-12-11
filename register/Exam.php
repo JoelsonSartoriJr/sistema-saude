@@ -36,12 +36,12 @@ try {
             $exams->addChild($key, $value);
         }
         $xml->asXML('../date/date.xml');
-        console_log("O Exame foi adicionado com sucesso no banco de dados");
+        $_SESSION['erro'] = "Exame cadastrado com sucesso!";
     }
   } else {
-      console_log('Erro ao conectar ao bando de dados.....');
+    $_SESSION['erro'] = "Erro ao conectar ao banco!";
   }
-  header("Location: http://localhost:8080/views/admin/admin.php");
+  header("Location: http://localhost:8080/views/laboratorio/laboratorio.php");
 
 } catch (Throwable $e) {
     console_log('Throwable'.$e);

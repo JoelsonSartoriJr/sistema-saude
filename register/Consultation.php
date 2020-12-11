@@ -39,9 +39,9 @@ try {
         $_SESSION['erro'] = "Consulta cadastrado com sucesso!";
     }
   } else {
-      console_log('Erro ao conectar ao bando de dados.....');
+    $_SESSION['erro'] = "Erro ao conectar ao banco!";
   }
-  header("Location: http://localhost:8080/views/admin/admin.php");
+  header("Location: http://localhost:8080/views/medico/medico.php");
 
 } catch (Throwable $e) {
     console_log('Throwable'.$e);
