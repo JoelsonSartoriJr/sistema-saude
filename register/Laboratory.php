@@ -17,7 +17,7 @@ try {
             $node = $xml->xpath("//user[cnpj = '$cnpj']");
 
             if(count($node) > 0){
-                echo '<script>alert("O Láboratorio já existe!")</script>';
+                $_SESSION['erro'] = "Laboratorio já cadastrado!";
             }else{
                 $user = $xml->users->addChild('user');
                 $id = md5(uniqid(""));
@@ -36,13 +36,13 @@ try {
                 }
 
                 $xml->asXML('../date/date.xml');
-                echo '<script>alert("O Laboratorio foi adicionado com sucesso no banco de dados")</script>';
+                $_SESSION['erro'] = "Laboratorio cadastrado com sucesso!";
                 
             }
             
         }
     } else {
-        console_log('Erro ao conectar ao bando de dados.....');
+        $_SESSION['erro'] = "Erro ao conectar ao banco!";
     }
     header("Location: http://localhost:8080/views/admin/admin.php");
 

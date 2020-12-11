@@ -15,6 +15,7 @@ function console_log($data)
     echo '</script>';
 }
 
-function type(){
 
+function alerta() {
+    echo "<script type='text/javascript'>alert(Usuario já existe);</script>";
 }

@@ -18,8 +18,7 @@ try {
             $node = $xml->xpath("//user[cpf = '$cpf']");
 
             if(count($node) > 0){
-                $name = $_POST['name'];
-                echo '<script>alert("O Paciente já existe!)</script>';
+                $_SESSION['erro'] = "Paciente já cadastrado!";
             }else{
                 $user = $xml->users->addChild('user');
 
@@ -39,11 +38,11 @@ try {
                     $user->addChild($key, $value);
                 }
                 $xml->asXML('../date/date.xml');
-                echo '<script>alert("O Paciente foi adicionado com sucesso no banco de dados")</script>';
+                $_SESSION['erro'] = "Paciente cadastrado com sucesso!";
             }
         }
     } else {
-        console_log('Erro ao conectar ao bando de dados.....');
+        $_SESSION['erro'] = "Erro ao conectar ao banco!";
     }
     header("Location: http://localhost:8080/views/admin/admin.php");
 

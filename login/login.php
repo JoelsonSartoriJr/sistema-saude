@@ -5,7 +5,6 @@ require_once('../utils/Utils.php');
 
 try {
     $method = $_SERVER['REQUEST_METHOD'];
-    
     if (file_exists('../date/date.xml')){
         $xml = simplexml_load_file('../date/date.xml')  or die ("Failed to load");
         if($method == 'POST'){
@@ -32,12 +31,13 @@ try {
                     header('Location: ../views/paciente/paciente.php');
                 }
             }else{
-                echo '<script>alert("Usuario invalido!")</script>';
+                $_SESSION['erro'] = "Usuario invalido!";
                 header("Location: http://localhost:8080");
             }
         }
     } else {
-        console_log('Erro ao conectar ao bando de dados.....');
+        $_SESSION['erro'] = "Erro ao conectar ao banco de dados!";
+        header("Location: http://localhost:8080");
     }
 
 } catch (Throwable $e) {

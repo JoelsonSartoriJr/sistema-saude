@@ -27,7 +27,8 @@ if (count($_COOKIE) > 0) {
 
 	<?php
 	if (isset($_SESSION['erro'])) {
-		echo $_SESSION['erro'];
+		$erro = $_SESSION['erro'];
+		echo "<script type='text/javascript'>alert('$erro');</script>";
 		unset($_SESSION['erro']);
 	}
 	?>
