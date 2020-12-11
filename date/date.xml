@@ -8,9 +8,9 @@
             <email>admin@email.com</email>
             <password>admin</password>
         </user>
-    </users>
+    <user><specialty>Ginecologia</specialty><name>medico</name><crm>(87) 654321</crm><id>ba511d8593281a872d05ffccc28f0e53</id><type>doctor</type><phone>(53) 9 9923-3659</phone><email>medico@medico.com</email><address>Av Rio Grande, 655</address><password>medico</password></user><user><name>Paciente 2</name><gender>Outro</gender><date_nasc>2020-12-23</date_nasc><cpf>032.234.210-123</cpf><id>b6b09ff52a0fcee7fffe206eb3eea75b</id><type>patient</type><phone>(53) 9 9923-3659</phone><email>paciente@email.com</email><address>Av Rio Grande, 655</address><password>paciente</password></user><user><type_exam>Ultra-sonografia</type_exam><cnpj>11.111.111/1232-22</cnpj><name>Laboratorio</name><id>91a4f9720cbf962c1b15d551c069035d</id><type>lab</type><phone>(53) 9 9923-3659</phone><email>laboratorio@email.com</email><address>Rua Guadalajara, 25</address><password>laboratorio</password></user></users>
     <exams>
-    </exams>
+    <exam><type_exam>sangue</type_exam><result>asasas</result><lab>Laboratorio</lab><lab_id>91a4f9720cbf962c1b15d551c069035d</lab_id><patient_id>b6b09ff52a0fcee7fffe206eb3eea75b</patient_id><id>d1c7e2653f2456c655f136adca957763</id><hour>18:00</hour><date>2020-12-03</date><obs>asas</obs><patient>Paciente 2</patient><doctor>medico</doctor><others>asasas</others></exam></exams>
     <consultions>
-    </consultions>
+    <consultion><symptoms>nenhum</symptoms><recipe>aaaaaaaaaaaa</recipe><patience_id>b6b09ff52a0fcee7fffe206eb3eea75b</patience_id><doctor_id>ba511d8593281a872d05ffccc28f0e53</doctor_id><id>f4fcf5add2b994f95b11d51839e218f0</id><hour>15:59</hour><date>2020-12-02</date><obs>aaaaaaaaa</obs><patient>Paciente 2</patient><doctor>medico</doctor><others>aaaaaaaaaaa</others></consultion></consultions>
 </date>
