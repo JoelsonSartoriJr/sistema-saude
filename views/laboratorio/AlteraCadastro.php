@@ -11,6 +11,12 @@ if ($_SESSION['type'] != 'lab') {
     console_log('Usuario não é laboratorio...');
     header("Location: index.php");
 }
+
+$xml = simplexml_load_file('../../date/date.xml');
+$id = $_SESSION['user'];
+$info_user = $xml->xpath("//user[id = '$id']");
+
+console_log($info_user);
 ?>
 
 <!doctype html>
@@ -73,37 +79,37 @@ if ($_SESSION['type'] != 'lab') {
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          <input type="email" class="form-control"  placeholder="Email" value=<?php echo $info_user[0]->email; ?>>
         </div>
         <div class="form-group col-md-6">
           <label for="inputPassword">Senha</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+          <input type="password" class="form-control" placeholder="Senha" value=<?php echo $info_user[0]->password; ?>>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputName">Nome completo</label>
-          <input type="name" class="form-control" id="inputEmail4" placeholder="Nome">
+          <input type="name" class="form-control"  placeholder="Nome" value=<?php echo $info_user[0]->name; ?>>
         </div>
         <div class="form-group col-md-6">
           <label for="inputAdress">Endereço</label>
-          <input type="text" class="form-control" id="inputPassword4" placeholder="Avenida, Número">
+          <input type="text" class="form-control" placeholder="Avenida, Número" value=<?php echo $info_user[0]->address; ?>>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputTel">Telefone</label>
-          <input pattern="^\d{2}-\d{5}-\d{4}$" type="tel" class="form-control" id="inputEmail4" placeholder="(99)99999-9999">
+          <input pattern="^\d{2}-\d{5}-\d{4}$" type="tel" class="form-control"  placeholder="(99)99999-9999" value=<?php echo $info_user[0]->phone; ?>>
         </div>
         <div class="form-group col-md-6">
           <label for="inputCnpj">CNPJ</label>
-          <input type="number" class="form-control" id="inputEmail4" placeholder="0000-0000">
+          <input type="number" class="form-control"  placeholder="0000-0000" value=<?php echo $info_user[0]->cnpj; ?>>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control" id="exampleFormControlSelect1" value=<?php echo $info_user[0]->type_exam; ?>>
             <option>Mamografia</option>
             <option>Ressonância Magnética</option>
             <option>Ultra-sonografia</option>
