@@ -100,7 +100,7 @@ console_log($info_user);
     <div class="form-row">
     <div class="form-group col-md-6">
           <label for="inputTel">Telefone</label>
-          <input pattern="^\d{2}-\d{5}-\d{4}$" type="tel" class="form-control"placeholder="(99)99999-9999" value=<?php echo $info_user[0]->phone?>>
+          <input pattern="^\d{2}-\d{5}-\d{4}$" type="tel" class="form-control" placeholder="(53)99923-3659"  placeholder="00.000.000/0000-00" onkeypress="$(this).mask('00.000.000/0000-00')" onkeypress="$(this).mask('(00) 0000-00009')"s value=<?php echo $info_user[0]->phone?>>
         </div>
       <div class="form-group col-md-6">
         <label for="exampleFormControlSelect1">Especialidade:</label>

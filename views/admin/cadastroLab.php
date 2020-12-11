@@ -97,11 +97,11 @@ if ($_SESSION['type'] != 'admin') {
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputTel">Telefone</label>
-          <input type="tel" class="form-control" name="phone" placeholder="(53)99606-9494" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$" onkeypress="$(this).mask('(00) 0000-00009')"s required>
+          <input type="tel" class="form-control" name="phone" placeholder="(53)99606-9494" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$" onkeypress="$(this).mask('(00) 00000-00009')"s required>
         </div>
         <div class="form-group col-md-6">
           <label for="inputCnpj">CNPJ</label>
-          <input type="number" class="form-control" name="cnpj" placeholder="00.000.000/0000-00" onkeypress="$(this).mask('00.000.000/0000-00')" required>
+          <input type="text" class="form-control" name="cnpj" placeholder="00.000.000/0000-00" onkeypress="$(this).mask('00.000.000/0000-00')" required>
         </div>
       </div>
       <div class="form-row">
