@@ -32,6 +32,7 @@ try {
                     header('Location: ../views/paciente/paciente.php');
                 }
             }else{
+                header("Location: http://localhost:8080");
                 console_log('Usúario não encontrado');
             }
         }
