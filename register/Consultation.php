@@ -36,7 +36,7 @@ try {
             $exams->addChild($key, $value);
         }
         $xml->asXML('../date/date.xml');
-        console_log("A consulta foi adicionado com sucesso no banco de dados");
+        $_SESSION['erro'] = "Consulta cadastrado com sucesso!";
     }
   } else {
       console_log('Erro ao conectar ao bando de dados.....');

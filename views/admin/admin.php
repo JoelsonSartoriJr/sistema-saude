@@ -80,7 +80,7 @@ if ($_SESSION['type'] != 'admin') {
             <p class="h1 pr-5 ">Lista de cadastrados</p>
           </div>
 
-          <div class="table-responsive p-2 ">
+          <div class="table-responsive p-2 mh-80">
             <table id="datas" class="table table-striped bg-white" >
               <thead class="thead-dark" >
                 <th>Nome</th>
