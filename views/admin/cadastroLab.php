@@ -97,7 +97,7 @@ if ($_SESSION['type'] != 'admin') {
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputTel">Telefone</label>
-          <input type="tel" class="form-control" name="phone" placeholder="(53)99606-9494" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$" onkeypress="$(this).mask('(00) 00000-00009')"s required>
+          <input type="tel" class="form-control" name="phone" placeholder="(53)99606-9494"  onkeypress="$(this).mask('(00) 00000-0000')" required>
         </div>
         <div class="form-group col-md-6">
           <label for="inputCnpj">CNPJ</label>

@@ -99,7 +99,7 @@ console_log($info_user);
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputTel">Telefone</label>
-          <input pattern="^\d{2}-\d{5}-\d{4}$" type="tel" class="form-control"  placeholder="(99)99999-9999"  placeholder="00.000.000/0000-00" onkeypress="$(this).mask('00.000.000/0000-00')" value=<?php echo $info_user[0]->phone; ?>>
+          <input type="tel" class="form-control"  placeholder="(99)99999-9999"  placeholder="00.000.000/0000-00" onkeypress="$(this).mask('00.000.000/0000-00')" value=<?php echo $info_user[0]->phone; ?>>
         </div>
         <div class="form-group col-md-6">
           <label for="inputCnpj">CNPJ</label>

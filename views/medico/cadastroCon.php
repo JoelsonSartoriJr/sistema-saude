@@ -90,7 +90,7 @@ $doctor = $xml->xpath("//user[type = 'doctor']");
           </select>
         </div>
         <div class="form-group col">
-          <label for="inputState">Médicx</label>
+          <label for="inputState">Médico</label>
           <select name="doctor" class="form-control">
             <?php
               foreach($doctor as $user){
