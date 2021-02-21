@@ -2,54 +2,42 @@
 
 session_start();
 
-
-require_once '../utils/Utils.php';
-require_once '../model/Lab.php';
+require_once('../login/conexao.php');
+require_once('../utils/Utils.php');
 
 try {
+    $cnpj = $_POST['cnpj'];
 
-    $method = $_SERVER['REQUEST_METHOD'];
-    
-    if (file_exists('../date/date.xml')){
-        $xml = simplexml_load_file('../date/date.xml')  or die ("Failed to load");
-        if($method == 'POST'){
-            $cnpj = $_POST['cnpj'];
-            $node = $xml->xpath("//user[cnpj = '$cnpj']");
+    $query = $conn->prepare("SELECT * FROM laboratory WHERE cnpj = ? ");
+    $query->execute(array($cnpj));
 
-            if(count($node) > 0){
-                $_SESSION['erro'] = "Laboratorio já cadastrado!";
-            }else{
-                $user = $xml->users->addChild('user');
-                $id = md5(uniqid(""));
-                $type = 'lab';
-                $name = $_POST['name'];
-                $phone = $_POST['phone'];
-                $email = $_POST['email'];
-                $address = $_POST['address'];
-                $password = $_POST['password'];
-                $type_exam = $_POST['type_exam'];
-
-                $lab = new Lab($id, $name, $type, $phone, $email,$address, $password, $type_exam, $cnpj);
-
-                foreach ($lab as $key => $value){
-                    $user->addChild($key, $value);
-                }
-
-                $xml->asXML('../date/date.xml');
-                $_SESSION['erro'] = "Laboratorio cadastrado com sucesso!";
-                
-            }
-            
-        }
+    if ($query->rowCount()) {
+        $_SESSION['erro'] = 'Laboratorio já cadastrado';
+        header("Location: http://localhost:8000/views/admin/admin.php");
     } else {
-        $_SESSION['erro'] = "Erro ao conectar ao banco!";
-    }
-    header("Location: http://localhost:8000/views/admin/admin.php");
+        $type = 'lab';
+        $name = $_POST['name'];
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+        $address = $_POST['address'];
+        $password = $_POST['password'];
+        $type_exam = $_POST['type_exam'];
 
+        $queryUser = $conn->prepare("INSERT INTO users (name, email, password, type) VALUES(?, ?, ?, ?)");
+        $queryUser->execute(array($name, $email, $password, $type));
+
+        $id = $conn->lastInsertId();
+
+        $queryLab = $conn->prepare("INSERT INTO laboratory (id, cnpj, phone, address, type_exam) VALUES(?, ?, ?, ?, ?)");
+        $queryLab->execute(array($id, $cnpj, $phone, $address, $type_exam));
+
+        $_SESSION['erro'] = "Laboratório cadastrado com sucesso!";
+        header("Location: http://localhost:8000/views/admin/admin.php");
+    }
 } catch (Throwable $e) {
-    console_log('Throwable'.$e);
-    header("Location: http://localhost:8000");
+    console_log('Throwable' . $e);
+    header("Location: http://localhost:8080");
 } catch (Exception $e) {
-    console_log('Exception'.$e);
-    header("Location: http://localhost:8000");
+    console_log('Exception' . $e);
+    header("Location: http://localhost:8080");
 }
