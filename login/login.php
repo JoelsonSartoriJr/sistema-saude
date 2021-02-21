@@ -2,48 +2,30 @@
 
 session_start();
 require_once('../utils/Utils.php'); 
+require_once('./conexao.php');
 
-try {
-    $method = $_SERVER['REQUEST_METHOD'];
-    if (file_exists('../date/date.xml')){
-        $xml = simplexml_load_file('../date/date.xml')  or die ("Failed to load");
-        if($method == 'POST'){
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $node = $xml->xpath("//user[email = '$email' and password = '$password']");
+if(isset($_POST["email"]) && isset($_POST["password"]) && $conn != null){
+    $query = $conn->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
+    $query->execute(array($_POST['email'], $_POST['password']));
 
-            if(count($node) > 0){
-                $id = (string)$node[0]->id;
-                $name = (string)$node[0]->name;
-                $type = (string)$node[0]->type;
-                
-                $_SESSION['user'] = $id;
-                $_SESSION['name'] = $name;
-                $_SESSION['type'] = $type;
-
-                if($type == 'admin'){
-                    header('Location: ../views/admin/admin.php');
-                } elseif($type == 'doctor'){
-                    header('Location: ../views/medico/medico.php');
-                }elseif($type == 'lab'){
-                    header('Location: ../views/laboratorio/laboratorio.php');
-                }elseif($type == 'patient'){
-                    header('Location: ../views/paciente/paciente.php');
-                }
-            }else{
-                $_SESSION['erro'] = "Usuario invalido!";
-                header("Location: http://localhost:8080");
-            }
+    if($query->rowCount()){
+        $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
+        $_SESSION['user'] = array($user['id'], $user['name'], $user['email'], $user['type']);
+        
+        if($user['type'] == 'admin'){
+            header('Location: ../views/admin/admin.php');
+        } elseif($user['type']== 'doctor'){
+            header('Location: ../views/medico/medico.php');
+        }elseif($user['type'] == 'lab'){
+            header('Location: ../views/laboratorio/laboratorio.php');
+        }elseif($user['type'] == 'patient'){
+            header('Location: ../views/paciente/paciente.php');
         }
-    } else {
-        $_SESSION['erro'] = "Erro ao conectar ao banco de dados!";
-        header("Location: http://localhost:8080");
+    }else{
+        $_SESSION['erro'] = "Usuario invalido!";
+        header("Location: http://localhost:8000");
     }
-
-} catch (Throwable $e) {
-    console_log('Throwable'.$e);
-    header("Location: http://localhost:8080");
-} catch (Exception $e) {
-    console_log('Exception'.$e);
-    header("Location: http://localhost:8080");
+}else{
+    $_SESSION['erro'] = "Digite o email e a senha!";
+    header("Location: http://localhost:8000");
 }
