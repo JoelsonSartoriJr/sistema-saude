@@ -43,12 +43,12 @@ try {
     } else {
         $_SESSION['erro'] = "Erro ao conectar ao banco!";
     }
-    header("Location: http://localhost:8080/views/admin/admin.php");
+    header("Location: http://localhost:8000/views/admin/admin.php");
 
 } catch (Throwable $e) {
     console_log('Throwable'.$e);
-    header("Location: http://localhost:8080");
+    header("Location: http://localhost:8000");
 } catch (Exception $e) {
     console_log('Exception'.$e);
-    header("Location: http://localhost:8080");
+    header("Location: http://localhost:8000");
 }
