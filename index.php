@@ -1,16 +1,3 @@
-<?php
-session_start();
-if (count($_COOKIE) > 0) {
-	if (isset($_COOKIE["user"])) {
-		echo $_COOKIE["user"];
-		$_SESSION['cookieuser'] =  base64_decode(htmlspecialchars($_COOKIE["user"]));
-		header("Location: login/login.php");
-	}
-} else {
-	setCookie('user');
-}
-?>
-
 <!doctype html>
 <html lang="pt-br">
 
@@ -26,6 +13,7 @@ if (count($_COOKIE) > 0) {
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<?php
+	session_start();
 	if (isset($_SESSION['erro'])) {
 		$erro = $_SESSION['erro'];
 		echo "<script type='text/javascript'>alert('$erro');</script>";
