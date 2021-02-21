@@ -1,22 +1,13 @@
 <?php
 session_start();
 
-require_once '../../utils/Utils.php';
+if(isset($_SESSION['user']) && $_SESSION['user'][3] == 'lab'){
 
-if (!isset($_SESSION['user'])) {
-    console_log('Usuario não está logado');
-    header("Location: index.php");
-}
-if ($_SESSION['type'] != 'lab') {
-    console_log('Usuario não é laboratorio...');
-    header("Location: index.php");
+}else{
+  $_SESSION['erro'] = "Usuario invalido!";
+  header("Location: http://localhost:8000");
 }
 
-$xml = simplexml_load_file('../../date/date.xml');
-$id = $_SESSION['user'];
-$info_user = $xml->xpath("//user[id = '$id']");
-
-console_log($info_user);
 ?>
 
 <!doctype html>

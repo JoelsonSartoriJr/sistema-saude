@@ -1,16 +1,13 @@
 <?php
 session_start();
 
-require_once '../../utils/Utils.php';
+if(isset($_SESSION['user']) && $_SESSION['user'][3] == 'admin'){
 
-if (!isset($_SESSION['user'])) {
-    console_log('Usuario não está logado');
-    header("Location: index.php");
+}else{
+  $_SESSION['erro'] = "Usuario invalido!";
+  header("Location: http://localhost:8000");
 }
-if ($_SESSION['type'] != 'admin') {
-    console_log('Usuario não é administrador');
-    header("Location: index.php");
-}
+
 ?>
 
 <!doctype html>
