@@ -26,6 +26,6 @@ if(isset($_POST["email"]) && isset($_POST["password"]) && $conn != null){
         header("Location: http://localhost:8000");
     }
 }else{
-    $_SESSION['erro'] = "Digite o email e a senha!";
+    $_SESSION['erro'] = "Erro de conexão ao banco!";
     header("Location: http://localhost:8000");
 }
