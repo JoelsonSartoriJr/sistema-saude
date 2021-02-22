@@ -26,10 +26,10 @@ try {
         $queryUser = $conn->prepare("INSERT INTO users (name, email, password, type) VALUES(?, ?, ?, ?)");
         $queryUser->execute(array($name, $email, $password, $type));
 
-        $id = $conn->lastInsertId();
+        $id_user = $conn->lastInsertId();
 
-        $queryLab = $conn->prepare("INSERT INTO laboratory (id, cnpj, phone, address, type_exam) VALUES(?, ?, ?, ?, ?)");
-        $queryLab->execute(array($id, $cnpj, $phone, $address, $type_exam));
+        $queryLab = $conn->prepare("INSERT INTO laboratory (cnpj, id_user, phone, address, type_exam) VALUES(?, ?, ?, ?, ?)");
+        $queryLab->execute(array($cnpj, $id_user, $phone, $address, $type_exam));
 
         $_SESSION['erro'] = "Laboratório cadastrado com sucesso!";
         header("Location: http://localhost:8000/views/admin/admin.php");
