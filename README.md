@@ -5,8 +5,8 @@ O objetivo deste trabalho é implementar um sistema de gerenciamento de consulta
 ## Tabelas necessárias
 
 1. users contem: id, name, email, password.
-2. doctor contem: id, crm, phone, address, specialty.
-3. laboratory contem: id, cnpj, phone, address, type_exam.
+2. doctor contem: crm, id_user, phone, address, specialty.
+3. laboratory contem: cnpj, id_user, phone, address, type_exam.
 
 ## Iniciar o projeto
 
