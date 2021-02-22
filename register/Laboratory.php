@@ -7,18 +7,21 @@ require_once('../utils/Utils.php');
 
 try {
     $cnpj = $_POST['cnpj'];
+    $email = $_POST['email'];
 
-    $query = $conn->prepare("SELECT * FROM laboratory WHERE cnpj = ? ");
-    $query->execute(array($cnpj));
+    $queryLab = $conn->prepare("SELECT * FROM laboratory WHERE cnpj = ? ");
+    $queryLab->execute(array($cnpj));
 
-    if ($query->rowCount()) {
+    $queryUser = $conn->prepare("SELECT * FROM users WHERE email = ?");
+    $queryUser->execute(array($email));
+
+    if ($queryLab->rowCount() == 1 or $queryUser == 1) {
         $_SESSION['erro'] = 'Laboratorio já cadastrado';
         header("Location: http://localhost:8000/views/admin/admin.php");
     } else {
         $type = 'lab';
         $name = $_POST['name'];
         $phone = $_POST['phone'];
-        $email = $_POST['email'];
         $address = $_POST['address'];
         $password = $_POST['password'];
         $type_exam = $_POST['type_exam'];

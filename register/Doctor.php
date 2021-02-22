@@ -7,18 +7,21 @@ require_once('../utils/Utils.php');
 
 try {
     $crm = $_POST['crm'];
+    $email = $_POST['email'];
 
-    $query = $conn->prepare("SELECT * FROM doctor WHERE crm = ? ");
-    $query->execute(array($crm));
+    $queryDoc = $conn->prepare("SELECT * FROM doctor WHERE crm = ?");
+    $queryDoc->execute(array($crm));
 
-    if ($query->rowCount()) {
+    $queryUser = $conn->prepare("SELECT * FROM users WHERE email = ?");
+    $queryUser->execute(array($email));
+
+    if ($queryDoc->rowCount() == 1 or $queryUser->rowCount() == 1) {
         $_SESSION['erro'] = 'Médico já cadastrado';
         header("Location: http://localhost:8000/views/admin/admin.php");
     } else {
         $type = 'doctor';
         $name = $_POST['name'];
         $phone = $_POST['phone'];
-        $email = $_POST['email'];
         $address = $_POST['address'];
         $password = $_POST['password'];
         $specialty = $_POST['specialty'];
@@ -36,8 +39,8 @@ try {
     }
 } catch (Throwable $e) {
     console_log('Throwable' . $e);
-    header("Location: http://localhost:8080");
+    header("Location: http://localhost:8000");
 } catch (Exception $e) {
     console_log('Exception' . $e);
-    header("Location: http://localhost:8080");
+    header("Location: http://localhost:8000");
 }
