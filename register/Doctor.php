@@ -26,10 +26,10 @@ try {
         $queryUser = $conn->prepare("INSERT INTO users (name, email, password, type) VALUES(?, ?, ?, ?)");
         $queryUser->execute(array($name, $email, $password, $type));
 
-        $id = $conn->lastInsertId();
+        $id_user = $conn->lastInsertId();
 
-        $queryDoc = $conn->prepare("INSERT INTO doctor (id, crm, phone, address, specialty) VALUES(?, ?, ?, ?, ?)");
-        $queryDoc->execute(array($id, $crm, $phone, $address, $specialty));
+        $queryDoc = $conn->prepare("INSERT INTO doctor (crm, id_user, phone, address, specialty) VALUES(?, ?, ?, ?, ?)");
+        $queryDoc->execute(array($crm, $id_user, $phone, $address, $specialty));
 
         $_SESSION['erro'] = "Médico cadastrado com sucesso!";
         header("Location: http://localhost:8000/views/admin/admin.php");
