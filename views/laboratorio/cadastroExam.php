@@ -2,7 +2,7 @@
 session_start();
 
 if(isset($_SESSION['user']) && $_SESSION['user'][3] == 'lab'){
-
+  require_once('../../login/conexao.php');
 }else{
   $_SESSION['erro'] = "Usuario invalido!";
   header("Location: http://localhost:8000");
@@ -43,7 +43,7 @@ if(isset($_SESSION['user']) && $_SESSION['user'][3] == 'lab'){
   <div class=" logo d-flex justify-content-center rounded-circle">
     <img src="../../assets/img/medica.jpg" class="rounded-circle">
     <div class="nome">
-      <p class="font-weight-bold"><?php echo $_SESSION['name']?></p>
+      <p class="font-weight-bold"><?php echo $_SESSION['user'][1]?></p>
       <p>Laboratório</p>
     </div>
   </div>
