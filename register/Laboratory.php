@@ -39,8 +39,8 @@ try {
     }
 } catch (Throwable $e) {
     console_log('Throwable' . $e);
-    header("Location: http://localhost:8080");
+    header("Location: http://localhost:8000");
 } catch (Exception $e) {
     console_log('Exception' . $e);
-    header("Location: http://localhost:8080");
+    header("Location: http://localhost:8000");
 }
