@@ -2,7 +2,7 @@
 session_start();
 
 if(isset($_SESSION['user']) && $_SESSION['user'][3] == 'admin'){
-
+  require_once('../../login/conexao.php');
 }else{
   $_SESSION['erro'] = "Usuario invalido!";
   header("Location: http://localhost:8000");
@@ -84,36 +84,22 @@ if(isset($_SESSION['user']) && $_SESSION['user'][3] == 'admin'){
             <th>Nome</th>
             <th>e-mail</th>
             <th>tipo</th>
-            <th>Especialidade</th>
-            <th>Tipo de exame</th>
-            <th>CPF</th>
-            <th>CNPJ</th>
-            <th>CRM</th>
           </thead>
           <?php
-          $xml = simplexml_load_file('../../date/date.xml')  or die("Failed to load");
-          $users = $xml->users;
-          $qnt = count($users->user);
-          $id = $email = $specialty = $type_exam = '-----';
-          foreach ($users->user as $user) {
-            $name = $user->name;
-            $email = $user->email;
-            $type = $user->type;
-            $specialty = $user->specialty;
-            $type_exam = $user->type_exam;
-            $cpf = $user->cpf;
-            $cnpj = $user->cnpj;
-            $crm = $user->crm;
+          require_once('../../utils/Utils.php');
+          $sql = "SELECT * FROM users";
+          $result = $conn->query($sql);
+          $rows = $result->fetchAll();
+          console_log($rows);
+          foreach ($rows as $user) {
+            $name = $user[1];
+            $email = $user[2];
+            $type = $user[4];
           ?>
             <tr>
               <td> <?php echo $name; ?> </td>
               <td> <?php echo $email; ?> </td>
               <td> <?php echo $type; ?> </td>
-              <td> <?php echo $specialty; ?> </td>
-              <td> <?php echo $type_exam; ?> </td>
-              <td> <?php echo $cpf; ?> </td>
-              <td> <?php echo $cnpj; ?> </td>
-              <td> <?php echo $crm; ?> </td>
             </tr>
           <?php } ?>
 
