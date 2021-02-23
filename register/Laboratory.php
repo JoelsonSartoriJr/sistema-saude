@@ -15,7 +15,7 @@ try {
     $queryUser = $conn->prepare("SELECT * FROM users WHERE email = ?");
     $queryUser->execute(array($email));
 
-    if ($queryLab->rowCount() == 1 or $queryUser == 1) {
+    if ($queryLab->rowCount() == 1 or $queryUser->rowCount() == 1) {
         $_SESSION['erro'] = 'Laboratorio já cadastrado';
         header("Location: http://localhost:8000/views/admin/admin.php");
     } else {
