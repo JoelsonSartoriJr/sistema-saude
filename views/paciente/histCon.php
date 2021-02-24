@@ -82,16 +82,15 @@ if (isset($_SESSION['user']) && $_SESSION['user'][3] == 'patient') {
             <th>Data</th>
           </thead>
           <?php
-          $id = $_SESSION['user'][0];
-          $sql = "SELECT * FROM  WHERE id_patient= $id";
-          $result = $conn->query($sql);
+          $id_patient = $_SESSION['user'][0];
+          $result = $conn->query("SELECT * FROM consultation WHERE id_patient= $id_patient");
           $rows = $result->fetchAll();
+          console_log($rows);
           foreach ($rows as $user) {
-            $doctor = $user[2];
-            $type_exam = $user[8];
-            $symptoms = $user[7];
-            $hour = $user[3];
-            $data = $user[4];
+            $doctor = $user[3];
+            $symptoms = $user[8];
+            $hour = $user[4];
+            $data = $user[5];
           ?>
             <tr>
               <td> <?php echo $doctor; ?> </td>
