@@ -13,17 +13,22 @@ try {
   $type_exam = $_POST['type_exam'];
   $obs = $_POST['obs'];
   $others = $_POST['others'];
-  $result = $_POST['result'];
+  $symptoms = $_POST['symptoms'];
+  $recipe = $_POST['recipe'];
 
-  $queryUser = $conn->prepare("INSERT INTO exam (id_lab, patient, doctor, hour, date, obs, others, type_exam, result) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
-  $queryUser->execute(array($lab_id, $patient, $doctor, $hour, $date, $obs, $others, $type_exam, $result));
 
-  $_SESSION['erro'] = "Exame cadastrado com sucesso!";
-  header("Location: http://localhost:8000/views/laboratorio/laboratorio.php");
+  $query_patient = $conn->query("SELECT * FROM users WHERE name= '$patient' ");
+  $patient_id = $query_patient->fetchAll();
+  $patient_id = $patient_id[0][0];
+
+  $queryUser = $conn->prepare("INSERT INTO consultation (id_doctor, id_patient, doctor, hour, date, obs, others, symptoms, recipe) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+  $queryUser->execute(array($doctor_id, $patient_id, $doctor, $hour, $date, $obs, $others, $symptoms, $recipe));
+
+  $_SESSION['erro'] = "Consulta cadastrado com sucesso!";
+  header("Location: http://localhost:8000/views/medico/medico.php");
 } catch (Throwable $e) {
   console_log('Throwable' . $e);
   header("Location: http://localhost:8000");
 } catch (Exception $e) {
-  console_log('Exception' . $e);
   header("Location: http://localhost:8000");
 }

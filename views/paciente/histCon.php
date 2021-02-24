@@ -90,13 +90,13 @@ if (isset($_SESSION['user']) && $_SESSION['user'][3] == 'patient') {
             $doctor = $user[2];
             $type_exam = $user[8];
             $symptoms = $user[7];
-            $hora = $user[3];
+            $hour = $user[3];
             $data = $user[4];
           ?>
             <tr>
               <td> <?php echo $doctor; ?> </td>
               <td> <?php echo $symptoms; ?> </td>
-              <td> <?php echo $hora; ?> </td>
+              <td> <?php echo $hour; ?> </td>
               <td> <?php echo $data; ?> </td>
             </tr>
           <?php } ?>
