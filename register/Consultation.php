@@ -1,52 +1,29 @@
 <?php
-
 session_start();
 
-
-require_once '../utils/Utils.php';
-require_once '../model/Consultation.php';
+require_once('../utils/Utils.php');
+require_once('../login/conexao.php');
 
 try {
+  $doctor_id = $_SESSION['user'][0];
+  $patient = $_POST['patient'];
+  $doctor = $_POST['doctor'];
+  $hour = $_POST['hour'];
+  $date = $_POST['date'];
+  $type_exam = $_POST['type_exam'];
+  $obs = $_POST['obs'];
+  $others = $_POST['others'];
+  $result = $_POST['result'];
 
-    $method = $_SERVER['REQUEST_METHOD'];
-    
-  if (file_exists('../date/date.xml')){
-    $xml = simplexml_load_file('../date/date.xml')  or die ("Failed to load");
-    if($method == 'POST'){
-        $exams = $xml->consultions->addChild('consultion');
+  $queryUser = $conn->prepare("INSERT INTO exam (id_lab, patient, doctor, hour, date, obs, others, type_exam, result) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)");
+  $queryUser->execute(array($lab_id, $patient, $doctor, $hour, $date, $obs, $others, $type_exam, $result));
 
-        $id = md5(uniqid(""));
-        $patient = $_POST['patient'];
-        $patient_id = $xml->xpath("//user[name = '$patient']");
-        $patient_id = $patient_id[0]->id;
-
-        $doctor = $_POST['doctor'];
-        $doctor_id = $xml->xpath("//user[name = '$doctor']");
-        $doctor_id = $doctor_id[0]->id;
-
-        $hour = $_POST['hour'];
-        $date = $_POST['date'];
-        $obs = $_POST['obs'];
-        $others = $_POST['others'];
-        $symptoms = $_POST['symptoms'];
-        $recipe = $_POST['recipe'];
-
-        $exam = new Consultation($id,$patient,$patient_id, $doctor_id, $doctor, $hour, $date, $obs, $others, $symptoms, $recipe);
-        foreach ($exam as $key => $value){
-            $exams->addChild($key, $value);
-        }
-        $xml->asXML('../date/date.xml');
-        $_SESSION['erro'] = "Consulta cadastrado com sucesso!";
-    }
-  } else {
-    $_SESSION['erro'] = "Erro ao conectar ao banco!";
-  }
-  header("Location: http://localhost:8000/views/medico/medico.php");
-
+  $_SESSION['erro'] = "Exame cadastrado com sucesso!";
+  header("Location: http://localhost:8000/views/laboratorio/laboratorio.php");
 } catch (Throwable $e) {
-    console_log('Throwable'.$e);
-    header("Location: http://localhost:8000");
+  console_log('Throwable' . $e);
+  header("Location: http://localhost:8000");
 } catch (Exception $e) {
-    console_log('Exception'.$e);
-    header("Location: http://localhost:8000");
+  console_log('Exception' . $e);
+  header("Location: http://localhost:8000");
 }

@@ -20,21 +20,20 @@ try {
         header("Location: http://localhost:8000/views/admin/admin.php");
     } else {
         $type = 'lab';
+        $id_lab = $_SESSION['user'][0];
         $name = $_POST['name'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
         $password = $_POST['password'];
         $type_exam = $_POST['type_exam'];
 
-        $queryUser = $conn->prepare("INSERT INTO users (name, email, password, type) VALUES(?, ?, ?, ?)");
-        $queryUser->execute(array($name, $email, $password, $type));
+        $queryUser = $conn->prepare("UPDATE INTO users (id_lab, name, email, password, type) VALUES(?, ?, ?, ?, ?)");
+        $queryUser->execute(array($id_lab, $name, $email, $password, $type));
 
-        $id_lab = $conn->lastInsertId();
-
-        $queryLab = $conn->prepare("INSERT INTO laboratory (cnpj, id_lab, phone, address, type_exam) VALUES(?, ?, ?, ?, ?)");
+        $queryLab = $conn->prepare("UPDATE INTO laboratory (cnpj, id_lab, phone, address, type_exam) VALUES(?, ?, ?, ?, ?)");
         $queryLab->execute(array($cnpj, $id_lab, $phone, $address, $type_exam));
 
-        $_SESSION['erro'] = "Laboratório cadastrado com sucesso!";
+        $_SESSION['erro'] = "Laboratório alterado com sucesso!";
         header("Location: http://localhost:8000/views/admin/admin.php");
     }
 } catch (Throwable $e) {
