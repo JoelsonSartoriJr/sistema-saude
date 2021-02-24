@@ -3,6 +3,7 @@ session_start();
 
 if (isset($_SESSION['user']) && $_SESSION['user'][3] == 'doctor') {
   require_once('../../login/conexao.php');
+  require_once('../../utils/Utils.php');
 } else {
   $_SESSION['erro'] = "Usuario invalido!";
   header("Location: http://localhost:8000");
@@ -87,16 +88,14 @@ if (isset($_SESSION['user']) && $_SESSION['user'][3] == 'doctor') {
           </thead>
           <?php
           $id = $_SESSION['user'][0];
-          $sql = "SELECT * FROM exam WHERE id_user= $id";
+          $sql = "SELECT * FROM consultation WHERE id_doctor= $id";
           $result = $conn->query($sql);
           $rows = $result->fetchAll();
           foreach ($rows as $user) {
-            console_log($user);
-
             $patient = $user[2];
             $symptoms = $user[8];
-            $hora = $user[9];
-            $data = $user[4];
+            $hora = $user[4];
+            $data = $user[5];
           ?>
             <tr>
               <td> <?php echo $patient; ?> </td>
