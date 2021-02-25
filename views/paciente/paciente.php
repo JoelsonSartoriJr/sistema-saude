@@ -4,6 +4,10 @@ session_start();
 if (isset($_SESSION['user']) && $_SESSION['user'][3] == 'patient') {
   require_once('../../utils/Utils.php');
   require_once('../../login/conexao.php');
+  $patient = $_SESSION['user'][1];
+  $result = $conn->query("SELECT * FROM exam WHERE patient= '$patient'");
+  $rows = $result->fetchAll();
+  $cont = $result->rowCount();
 } else {
   $_SESSION['erro'] = "Usuario invalido!";
   header("Location: http://localhost:8000");
@@ -70,7 +74,10 @@ if (isset($_SESSION['user']) && $_SESSION['user'][3] == 'patient') {
     <!--Topbar + Conteúdo-->
     <div>
       <div id="topbar-container" class="shadow p-3 bg-white rounded">
-        <p class="h1 pr-5 ">Historico de Exames</p>
+        <div class="d-flex flex-row">
+          <p class="h1 pr-5 ">Lista de Exames</p>
+          <p class="mt-auto">Quantidade de exames: <?php echo $cont ?></p>
+        </div>
       </div>
 
       <div class="table-responsive p-2">
@@ -82,16 +89,12 @@ if (isset($_SESSION['user']) && $_SESSION['user'][3] == 'patient') {
             <th>Data</th>
           </thead>
           <?php
-          $patient = $_SESSION['user'][1];
-          $result = $conn->query("SELECT * FROM exam WHERE patient= '$patient'");
-          $rows = $result->fetchAll();
-          console_log($rows);
           foreach ($rows as $user) {
             $lab = $user[2];
             $type_exam = $user[9];
             $hour = $user[5];
             $data = $user[6];
-            
+
           ?>
             <tr>
               <td> <?php echo $lab; ?> </td>
